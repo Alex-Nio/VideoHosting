@@ -32,40 +32,56 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Видео мейкер
-	function createVideo(target, Folder, VideoFile, subFolderName) {
+	function createVideo(target, Folder, VideoFile, subFolderName, subFoldersCount, subSubFolderName) {
 		let videoParent = document.createElement("div"),
 			videoWrapper = document.createElement("div");
 
 		videoParent.classList.add("video-content");
 		videoWrapper.classList.add("video-content-wrapper");
 
-		if (subFolderName.nodeValue == "\n\t\t\t\t") {
-			console.log("No subfolders");
-			console.log("Main Folder: " + Folder);
-			console.log("File Name: " + VideoFile);
-			videoWrapper.innerHTML = `
-				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
-					<source src="../data/Курсы/${Folder}/${VideoFile}" type="video/mp4" />
-					<p class="vjs-no-js">
-						To view this video please enable JavaScript, and consider upgrading to a
-						web browser that
-						<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					</p>
-				</video>
-			`;
-		} else {
-			console.log("Subfolders here");
-			subFolderName = subFolderName.textContent;
-			videoWrapper.innerHTML = `
-				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
-					<source src="../data/Курсы/${Folder}/${subFolderName}/${VideoFile}" type="video/mp4" />
-					<p class="vjs-no-js">
-						To view this video please enable JavaScript, and consider upgrading to a
-						web browser that
-						<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					</p>
-				</video>
-			`;
+		if (subFoldersCount <= 1) {
+			if (subFolderName.nodeValue == "\n\t\t\t\t") {
+				console.log("No subfolders");
+				console.log("Main Folder: " + Folder);
+				console.log("File Name: " + VideoFile);
+				videoWrapper.innerHTML = `
+					<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
+						<source src="../data/Курсы/${Folder}/${VideoFile}" type="video/mp4" />
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a
+							web browser that
+							<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+				`;
+			} else {
+				console.log("Subfolders here");
+				subFolderName = subFolderName.textContent;
+				videoWrapper.innerHTML = `
+					<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
+						<source src="../data/Курсы/${Folder}/${subFolderName}/${VideoFile}" type="video/mp4" />
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a
+							web browser that
+							<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+				`;
+			}
+		} else if (subFoldersCount >= 2) {
+			if (subSubFolderName != undefined) {
+				subFolderName = subFolderName.textContent;
+				videoWrapper.innerHTML = `
+					<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
+						<source src="../data/Курсы/${Folder}/${subSubFolderName}/${subFolderName}/${VideoFile}" type="video/mp4" />
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a
+							web browser that
+							<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+				`;
+			}
 		}
 
 		videoParent.append(videoWrapper);
@@ -166,17 +182,27 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Убираем подпапки
-	function removeSubFolders() {
-		let subFoldersList = document.querySelectorAll(".sub-folder__list");
+	function removeSubFolders(Selector, targetedEl) {
+		let subFoldersList = document.querySelectorAll(Selector);
 
-		subFoldersList.forEach((item) => {
-			item.remove();
-		});
+		for (let i = 0; i < subFoldersList.length; i++) {
+			let el = subFoldersList[i];
+
+			if (el == targetedEl || el == subFoldersList[0]) {
+			} else {
+				el.remove();
+			}
+		}
 	}
 
-	// Добавляем активный класс к ссылке
-	function addActiveClass(obj) {
+	// Добавляем активный класс к папке и подпапке
+	function addActiveClassToSubFolders(obj) {
 		obj.classList.add("active");
+	}
+
+	function addActiveClass(Selector) {
+		let target = document.querySelector(Selector);
+		target.classList.add("active");
 	}
 
 	// Сбрасываем активный класс с ссылок
@@ -201,160 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			el.remove();
 		});
 	}
-
-	request.addEventListener("readystatechange", () => {
-		if (request.readyState === 4 && request.status === 200) {
-			const data = JSON.parse(request.response);
-
-			data.forEach((obj) => {
-				let courseTitle = obj["Название курса"],
-					courseFolders = obj["Папки"],
-					courseFiles = obj["Файлы"];
-
-				// Показываем файлы в корне каталога
-				if (obj["Папки"] == "" && obj["Название курса"] == mainTitle) {
-					let values = courseFiles;
-					// формируем динамически список файлов курса
-					for (let i = 0; i < values.length; i++) {
-						let el = values[i];
-						addContent(el, coursesContentList);
-					}
-				} else if (obj["Файлы"] && obj["Название курса"] == mainTitle) {
-					let values = courseFiles;
-
-					for (let i = 0; i < values.length; i++) {
-						let el = values[i];
-						addContent(el, coursesContentList);
-					}
-				}
-
-				// Показываем папки с уроками внутри курса
-				if (obj["Название курса"] == mainTitle) {
-					let values = courseFolders;
-					// формируем динамически список файлов курса
-					for (let i = 0; i < values.length; i++) {
-						let el = values[i];
-
-						addContent(el, coursesContentList);
-					}
-
-					// Вешаем обработчик событий
-					coursesContentList.addEventListener("click", function (e) {
-						let target = e.target,
-							fileName = target.innerText,
-							subFolder = e.target.parentNode.parentNode.parentNode.firstChild;
-
-						let subFoldersCount = document.querySelectorAll(".sub-folder__list").length;
-						//? Logger
-						// console.log("Клик по:");
-						// console.log(target);
-						let subSubFolderName = document.querySelector(".link.active");
-						if (subSubFolderName != null) {
-							subSubFolderName = subSubFolderName.firstElementChild.innerText;
-							console.log(subSubFolderName);
-						}
-
-						// console.log("Файл:");
-						// console.log(fileName);
-
-						// console.log("Объект:");
-						// console.log(obj[fileName]);
-
-						// console.log("Папки:");
-						// console.log(courseFolders);
-
-						//! Если клик по активной ссылке
-						if (target.parentNode.classList.contains("link.active")) {
-							e.preventDefault();
-
-							//! Если клик по видео
-						} else if (fileName.substr(-4) == ".mp4") {
-							//* Toggle Classes
-							if (!target.classList.contains("sub-folder__link")) {
-								removeAllActiveClass(".link.active");
-								removeAllActiveClass(".table__row.active");
-								addActiveClass(target.parentNode);
-								addActiveClass(target.parentNode.parentNode);
-							}
-
-							removeVideo();
-							createVideo(target, courseTitle, fileName, subFolder);
-							toggle(target);
-
-							//* Scroll
-							scrollTo(".video-content");
-
-							//! Если клик по файлу
-						} else if (
-							fileName.substr(-3) == ".py" ||
-							fileName.substr(-3) == ".gz" ||
-							fileName.substr(-3) == ".js" ||
-							fileName.substr(-4) == ".pdf" ||
-							fileName.substr(-4) == ".txt" ||
-							fileName.substr(-4) == ".rtf" ||
-							fileName.substr(-4) == ".pkt" ||
-							fileName.substr(-4) == ".svg" ||
-							fileName.substr(-4) == ".sfk" ||
-							fileName.substr(-4) == ".apk" ||
-							fileName.substr(-4) == ".jar" ||
-							fileName.substr(-4) == ".yml" ||
-							fileName.substr(-4) == ".css" ||
-							fileName.substr(-4) == ".csv" ||
-							fileName.substr(-4) == ".gif" ||
-							fileName.substr(-4) == ".TTF" ||
-							fileName.substr(-4) == ".zip" ||
-							fileName.substr(-4) == ".key" ||
-							fileName.substr(-4) == ".ico" ||
-							fileName.substr(-4) == ".png" ||
-							fileName.substr(-4) == ".srt" ||
-							fileName.substr(-4) == ".jpg" ||
-							fileName.substr(-4) == ".url" ||
-							fileName.substr(-5) == ".html" ||
-							fileName.substr(-5) == ".webm" ||
-							fileName.substr(-5) == ".xlsx" ||
-							fileName.substr(-5) == ".json" ||
-							fileName.substr(-5) == ".docx" ||
-							fileName.substr(-5) == ".pptx" ||
-							fileName.substr(-6) == ".cache" ||
-							fileName.substr(-10) == "Dockerfile" ||
-							fileName.substr(-13) == ".unitypackage"
-						) {
-							openFile(target, courseTitle, subFolder, fileName, subFoldersCount, subSubFolderName);
-						} else {
-							//! Если клик по подпапке
-							if (!target.classList.contains("sub-folder__link")) {
-								removeSubFolders();
-
-								addSubFolders(target, obj[fileName]);
-
-								//* Toggle Classes
-								removeAllActiveClass(".link.active");
-								removeAllActiveClass(".table__row.active");
-								addActiveClass(target.parentNode);
-								addActiveClass(target.parentNode.parentNode);
-
-								//* Scroll
-								let scrollTarget = ".link.active";
-
-								scrollTo(scrollTarget);
-							}
-
-							if (target.classList.contains("sub-folder__link")) {
-								e.preventDefault();
-
-								addSubFolders(target, obj[fileName]);
-
-								let scrollTarget = ".sub-folder__link";
-								scrollTo(scrollTarget);
-							}
-						}
-					});
-				}
-			});
-
-			createIcons();
-		}
-	});
 
 	function createIcons() {
 		let allFiles = document.querySelectorAll(".link__box");
@@ -414,4 +286,173 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}
+
+	request.addEventListener("readystatechange", () => {
+		if (request.readyState === 4 && request.status === 200) {
+			const data = JSON.parse(request.response);
+
+			data.forEach((obj) => {
+				let courseTitle = obj["Название курса"],
+					courseFolders = obj["Папки"],
+					courseFiles = obj["Файлы"];
+
+				// Показываем файлы в корне каталога
+				if (obj["Папки"] == "" && obj["Название курса"] == mainTitle) {
+					let values = courseFiles;
+					// формируем динамически список файлов курса
+					for (let i = 0; i < values.length; i++) {
+						let el = values[i];
+						addContent(el, coursesContentList);
+					}
+				} else if (obj["Файлы"] && obj["Название курса"] == mainTitle) {
+					let values = courseFiles;
+
+					for (let i = 0; i < values.length; i++) {
+						let el = values[i];
+						addContent(el, coursesContentList);
+					}
+				}
+
+				// Показываем папки с уроками внутри курса
+				if (obj["Название курса"] == mainTitle) {
+					let values = courseFolders;
+					// формируем динамически список файлов курса
+					for (let i = 0; i < values.length; i++) {
+						let el = values[i];
+
+						addContent(el, coursesContentList);
+					}
+
+					// Вешаем обработчик событий
+					coursesContentList.addEventListener("click", function (e) {
+						let target = e.target,
+							fileName = target.innerText,
+							subFolder = e.target.parentNode.parentNode.parentNode.firstChild;
+
+						let subFoldersCount = document.querySelectorAll(".sub-folder__list").length,
+							subSubFolderName = document.querySelector(".link.active");
+
+						if (subSubFolderName != null) {
+							subSubFolderName = subSubFolderName.firstElementChild.innerText;
+						}
+
+						//? Logger
+						// console.log("Клик по:");
+						// console.log(target);
+
+						// console.log("Файл:");
+						// console.log(fileName);
+
+						// console.log("Объект:");
+						// console.log(obj[fileName]);
+
+						// console.log("Папки:");
+						// console.log(courseFolders);
+
+						//! Если клик по активной ссылке
+						if (target.parentNode.classList.contains("link.active")) {
+							e.preventDefault();
+
+							//! Если клик по видео
+						} else if (fileName.substr(-4) == ".mp4") {
+							//* Toggle Classes
+							if (!target.classList.contains("sub-folder__link")) {
+								removeAllActiveClass(".link.active");
+								removeAllActiveClass(".table__row.active");
+								addActiveClass(target.parentNode);
+								addActiveClass(target.parentNode.parentNode);
+							}
+
+							removeVideo();
+							createVideo(target, courseTitle, fileName, subFolder, subFoldersCount, subSubFolderName);
+							toggle(target);
+
+							//* Scroll
+							scrollTo(".video-content");
+
+							//! Если клик по файлу
+						} else if (
+							fileName.substr(-3) == ".py" ||
+							fileName.substr(-3) == ".gz" ||
+							fileName.substr(-3) == ".js" ||
+							fileName.substr(-4) == ".pdf" ||
+							fileName.substr(-4) == ".txt" ||
+							fileName.substr(-4) == ".rtf" ||
+							fileName.substr(-4) == ".pkt" ||
+							fileName.substr(-4) == ".svg" ||
+							fileName.substr(-4) == ".sfk" ||
+							fileName.substr(-4) == ".apk" ||
+							fileName.substr(-4) == ".jar" ||
+							fileName.substr(-4) == ".yml" ||
+							fileName.substr(-4) == ".css" ||
+							fileName.substr(-4) == ".csv" ||
+							fileName.substr(-4) == ".gif" ||
+							fileName.substr(-4) == ".TTF" ||
+							fileName.substr(-4) == ".zip" ||
+							fileName.substr(-4) == ".key" ||
+							fileName.substr(-4) == ".ico" ||
+							fileName.substr(-4) == ".png" ||
+							fileName.substr(-4) == ".srt" ||
+							fileName.substr(-4) == ".jpg" ||
+							fileName.substr(-4) == ".url" ||
+							fileName.substr(-5) == ".html" ||
+							fileName.substr(-5) == ".webm" ||
+							fileName.substr(-5) == ".xlsx" ||
+							fileName.substr(-5) == ".json" ||
+							fileName.substr(-5) == ".docx" ||
+							fileName.substr(-5) == ".pptx" ||
+							fileName.substr(-6) == ".cache" ||
+							fileName.substr(-10) == "Dockerfile" ||
+							fileName.substr(-13) == ".unitypackage"
+						) {
+							openFile(target, courseTitle, subFolder, fileName, subFoldersCount, subSubFolderName);
+						} else {
+							//! Если клик по подпапке
+							if (!target.classList.contains("sub-folder__link")) {
+								removeSubFolders();
+
+								addSubFolders(target, obj[fileName]);
+
+								//* Toggle Classes
+								removeAllActiveClass(".link.active");
+								removeAllActiveClass(".table__row.active");
+								addActiveClassToSubFolders(target.parentNode);
+								addActiveClassToSubFolders(target.parentNode.parentNode);
+
+								//* Scroll
+								let scrollTarget = ".link.active";
+
+								scrollTo(scrollTarget);
+							}
+
+							//! Если клик по папке в подпапке
+							if (target.classList.contains("sub-folder__link")) {
+								e.preventDefault();
+
+								addSubFolders(target, obj[fileName]);
+
+								let scrollTarget = ".sub-folder__link";
+								scrollTo(scrollTarget);
+							}
+						}
+
+						//! Подсветка активной подпапки
+						if (
+							target.classList.contains("sub-folder__link") &&
+							target.nextElementSibling.classList.contains("sub-folder__list")
+						) {
+							removeAllActiveClass(".sub-folder__list.active");
+							removeSubFolders(".sub-folder__list", target.nextElementSibling);
+							addActiveClassToSubFolders(target.nextElementSibling);
+
+							let scrollTarget = ".sub-folder__list.active";
+							scrollTo(scrollTarget);
+						}
+					});
+				}
+			});
+
+			createIcons();
+		}
+	});
 });
