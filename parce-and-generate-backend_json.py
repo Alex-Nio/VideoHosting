@@ -1,7 +1,7 @@
 import os
 import json
 
-mypath = "D:\\Programs\\OpenServer\\domains\\hosting\\video_hosting\\data\\Курсы"
+mypath = "D:\\Programs\\OpenServer\\domains\\hosting\\VideoHosting\\data\\Курсы"
 all_files = os.listdir(mypath)
 courses_main_folders = []
 courses_sub_folders = []
@@ -55,7 +55,6 @@ for i in range(len(all_files) + 1):
     def create_course():
         course_content["Название курса"] = courses_main_folders[i - 1]
         course_content["Папки"] = courses_sub_folders[i - 1]
-        # TODO: Дописать ниже добавление в словарь конретных файлов для курса
 
     create_course()
 
@@ -132,5 +131,8 @@ for course in courses:
 #! Работа с json
 # data = dict(zip(all_files, courses))
 data = courses
-with open("courses_data_content.json", "w", encoding="utf-8") as f:
+with open("video_content.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
+
+with open("video_titles.json", "w", encoding="utf-8") as f:
+    json.dump(all_files, f, ensure_ascii=False, indent=4)

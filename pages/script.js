@@ -1,4 +1,4 @@
-let url = "./../data/videos.json";
+let url = "./../data/video_content.json";
 
 document.addEventListener("DOMContentLoaded", function () {
 	const mainTitle = localStorage.getItem("trigger_name");
@@ -19,10 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	function addContent(elem, mainBlock) {
 		let row = document.createElement("li"),
 			link = document.createElement("a");
+		linkBox = document.createElement("div");
+
 		link.classList.add("link");
 		row.classList.add("table__row");
-		link.innerHTML = elem;
+		linkBox.classList.add("link__box");
+
+		linkBox.innerHTML = elem;
 		coursesContentList.append(row);
+		link.append(linkBox);
 		row.append(link);
 	}
 
@@ -36,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		if (subFolderName.nodeValue == "\n\t\t\t\t") {
 			console.log("No subfolders");
+			console.log("Main Folder: " + Folder);
+			console.log("File Name: " + VideoFile);
 			videoWrapper.innerHTML = `
 				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
 					<source src="../data/Курсы/${Folder}/${VideoFile}" type="video/mp4" />
@@ -62,17 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		videoParent.append(videoWrapper);
-		target.append(videoParent);
+		target.parentNode.append(videoParent);
 	}
 
 	// Кастомизация высоты
 	function getHeight(elm) {
 		var elmStyle = getComputedStyle(elm);
-		return (
-			parseInt(elmStyle.height) +
-			parseInt(elmStyle.paddingTop) +
-			parseInt(elmStyle.paddingBottom)
-		);
+		return parseInt(elmStyle.height) + parseInt(elmStyle.paddingTop) + parseInt(elmStyle.paddingBottom);
 	}
 
 	// Кастомизация переключений
@@ -94,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Прокрутка до верха видеофайла
 	function scrollTo(targetSelector) {
 		const scrollTarget = document.querySelector(targetSelector);
-		const topOffset = 100; // если не нужен отступ сверху
+		const topOffset = 80; // если не нужен отступ сверху
 		const elementPosition = scrollTarget.getBoundingClientRect().top;
 		const offsetPosition = elementPosition - topOffset;
 
@@ -129,19 +132,36 @@ document.addEventListener("DOMContentLoaded", function () {
 			createLink(item);
 		});
 
-		target.append(subFoldersList);
+		target.parentNode.append(subFoldersList);
 	}
 
 	// Открытие файла
-	function openFile(target, Folder, FileName, subFolderName) {
+	function openFile(target, Folder, subFolderName, FileName, subFoldersCount, subSubFolderName) {
 		let str;
-		if (subFolderName.nodeValue == "\n\t\t\t\t") {
-			str = `../data/Курсы/${Folder}/${FileName}`;
-			target.setAttribute("href", str);
-		} else {
-			subFolderName = subFolderName.textContent;
-			str = `../data/Курсы/${Folder}/${subFolderName}/${FileName}`;
-			target.setAttribute("href", str);
+
+		// console.log(target);
+
+		if (subFoldersCount <= 1) {
+			if (subFolderName.nodeValue == "\n\t\t\t\t") {
+				str = `../data/Курсы/${Folder}/${FileName}`;
+				if (target.classList.contains("link__box")) {
+					target.parentNode.setAttribute("href", str);
+				}
+				target.setAttribute("href", str);
+				console.log("Путь к файлу: " + str);
+			} else {
+				subFolderName = subFolderName.textContent;
+				str = `../data/Курсы/${Folder}/${subFolderName}/${FileName}`;
+				target.setAttribute("href", str);
+				console.log("Путь к файлу: " + str);
+			}
+		} else if (subFoldersCount >= 2) {
+			if (subSubFolderName != undefined) {
+				subFolderName = subFolderName.textContent;
+				str = `../data/Курсы/${Folder}/${subSubFolderName}/${subFolderName}/${FileName}`;
+				target.setAttribute("href", str);
+				console.log("Путь к файлу: " + str);
+			}
 		}
 	}
 
@@ -154,9 +174,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	// Добавляем активный класс к ссылке
+	function addActiveClass(obj) {
+		obj.classList.add("active");
+	}
+
 	// Сбрасываем активный класс с ссылок
-	function removeAllActiveClass() {
-		let links = document.querySelectorAll(".link.active");
+	function removeAllActiveClass(Selector) {
+		let links = document.querySelectorAll(Selector);
 
 		links.forEach((item) => {
 			item.classList.remove("active");
@@ -194,6 +219,13 @@ document.addEventListener("DOMContentLoaded", function () {
 						let el = values[i];
 						addContent(el, coursesContentList);
 					}
+				} else if (obj["Файлы"] && obj["Название курса"] == mainTitle) {
+					let values = courseFiles;
+
+					for (let i = 0; i < values.length; i++) {
+						let el = values[i];
+						addContent(el, coursesContentList);
+					}
 				}
 
 				// Показываем папки с уроками внутри курса
@@ -209,15 +241,18 @@ document.addEventListener("DOMContentLoaded", function () {
 					// Вешаем обработчик событий
 					coursesContentList.addEventListener("click", function (e) {
 						let target = e.target,
-							fileName = target.innerText;
+							fileName = target.innerText,
+							subFolder = e.target.parentNode.parentNode.parentNode.firstChild;
 
-						let subFolder =
-							e.target.parentNode.parentNode.parentNode
-								.firstChild;
-
+						let subFoldersCount = document.querySelectorAll(".sub-folder__list").length;
 						//? Logger
 						// console.log("Клик по:");
 						// console.log(target);
+						let subSubFolderName = document.querySelector(".link.active");
+						if (subSubFolderName != null) {
+							subSubFolderName = subSubFolderName.firstElementChild.innerText;
+							console.log(subSubFolderName);
+						}
 
 						// console.log("Файл:");
 						// console.log(fileName);
@@ -228,23 +263,28 @@ document.addEventListener("DOMContentLoaded", function () {
 						// console.log("Папки:");
 						// console.log(courseFolders);
 
-						//! Если линк уже активный
-						if (target.classList == "link active") {
+						//! Если клик по активной ссылке
+						if (target.parentNode.classList.contains("link.active")) {
 							e.preventDefault();
-							//! Для видео
+
+							//! Если клик по видео
 						} else if (fileName.substr(-4) == ".mp4") {
-							removeAllActiveClass();
-							target.classList.add("active");
+							//* Toggle Classes
+							if (!target.classList.contains("sub-folder__link")) {
+								removeAllActiveClass(".link.active");
+								removeAllActiveClass(".table__row.active");
+								addActiveClass(target.parentNode);
+								addActiveClass(target.parentNode.parentNode);
+							}
+
 							removeVideo();
-							createVideo(
-								target,
-								courseTitle,
-								fileName,
-								subFolder
-							);
+							createVideo(target, courseTitle, fileName, subFolder);
 							toggle(target);
+
+							//* Scroll
 							scrollTo(".video-content");
-							//! Для файлов
+
+							//! Если клик по файлу
 						} else if (
 							fileName.substr(-3) == ".py" ||
 							fileName.substr(-3) == ".gz" ||
@@ -279,19 +319,99 @@ document.addEventListener("DOMContentLoaded", function () {
 							fileName.substr(-10) == "Dockerfile" ||
 							fileName.substr(-13) == ".unitypackage"
 						) {
-							openFile(target, courseTitle, fileName, subFolder);
+							openFile(target, courseTitle, subFolder, fileName, subFoldersCount, subSubFolderName);
 						} else {
-							//! Для подпапки
-							removeSubFolders();
-							removeAllActiveClass();
-							target.classList.add("active");
-							let scrollTarget = "a.link.active";
-							scrollTo(scrollTarget);
-							addSubFolders(target, obj[fileName]);
+							//! Если клик по подпапке
+							if (!target.classList.contains("sub-folder__link")) {
+								removeSubFolders();
+
+								addSubFolders(target, obj[fileName]);
+
+								//* Toggle Classes
+								removeAllActiveClass(".link.active");
+								removeAllActiveClass(".table__row.active");
+								addActiveClass(target.parentNode);
+								addActiveClass(target.parentNode.parentNode);
+
+								//* Scroll
+								let scrollTarget = ".link.active";
+
+								scrollTo(scrollTarget);
+							}
+
+							if (target.classList.contains("sub-folder__link")) {
+								e.preventDefault();
+
+								addSubFolders(target, obj[fileName]);
+
+								let scrollTarget = ".sub-folder__link";
+								scrollTo(scrollTarget);
+							}
 						}
 					});
 				}
 			});
+
+			createIcons();
 		}
 	});
+
+	function createIcons() {
+		let allFiles = document.querySelectorAll(".link__box");
+
+		allFiles.forEach((file) => {
+			let fileType = file.innerText,
+				videoIcon = document.createElement("span"),
+				folderIcon = document.createElement("span"),
+				fileIcon = document.createElement("span");
+
+			videoIcon.classList.add("video-icon");
+			folderIcon.classList.add("folder-icon");
+			fileIcon.classList.add("file-icon");
+
+			if (
+				fileType.substr(-3) == ".py" ||
+				fileType.substr(-3) == ".gz" ||
+				fileType.substr(-3) == ".js" ||
+				fileType.substr(-4) == ".pdf" ||
+				fileType.substr(-4) == ".txt" ||
+				fileType.substr(-4) == ".rtf" ||
+				fileType.substr(-4) == ".pkt" ||
+				fileType.substr(-4) == ".svg" ||
+				fileType.substr(-4) == ".sfk" ||
+				fileType.substr(-4) == ".apk" ||
+				fileType.substr(-4) == ".jar" ||
+				fileType.substr(-4) == ".yml" ||
+				fileType.substr(-4) == ".css" ||
+				fileType.substr(-4) == ".csv" ||
+				fileType.substr(-4) == ".gif" ||
+				fileType.substr(-4) == ".TTF" ||
+				fileType.substr(-4) == ".zip" ||
+				fileType.substr(-4) == ".key" ||
+				fileType.substr(-4) == ".ico" ||
+				fileType.substr(-4) == ".png" ||
+				fileType.substr(-4) == ".srt" ||
+				fileType.substr(-4) == ".jpg" ||
+				fileType.substr(-4) == ".url" ||
+				fileType.substr(-5) == ".html" ||
+				fileType.substr(-5) == ".webm" ||
+				fileType.substr(-5) == ".xlsx" ||
+				fileType.substr(-5) == ".json" ||
+				fileType.substr(-5) == ".docx" ||
+				fileType.substr(-5) == ".pptx" ||
+				fileType.substr(-6) == ".cache" ||
+				fileType.substr(-10) == "Dockerfile" ||
+				fileType.substr(-13) == ".unitypackage"
+			) {
+				// console.log("Это какой-то файл");
+				file.prepend(fileIcon);
+			} else if (fileType.substr(-4) == ".mp4") {
+				// console.log("Это Видео файл");
+				file.prepend(videoIcon);
+			} else {
+				// console.log("Это Папка");
+				file.prepend(folderIcon);
+			}
+		});
+	}
 });
