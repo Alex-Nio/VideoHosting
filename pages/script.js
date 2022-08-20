@@ -1,3 +1,4 @@
+//! Не забыть прописать в консоли Npx Webpack перед внесением изменений
 const contentCreator = require("../modules/contentCreator");
 const videoCreator = require("../modules/videoCreator");
 const openFile = require("../modules/openFile.js");
@@ -5,6 +6,7 @@ const toggle = require("../modules/toggle");
 const scrollTo = require("../modules/scrollAnimation");
 const addSubFolders = require("../modules/addSubFolders");
 const removeSubFolders = require("../modules/removeSubFolders");
+const removeAllSubFolders = require("../modules/removeAllSubFolders");
 const removeVideo = require("../modules/videoRemover");
 const addActiveClassToSubFolders = require("../modules/subFoldersActiveClassEditor.js");
 // const addActiveClass = require("../modules/addActiveClass.js");
@@ -86,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
 						}
 
 						//? Logger
-						// console.log("Клик по:");
-						// console.log(target);
+						console.log("Клик по:");
+						console.log(target);
 
 						// console.log("Файл:");
 						// console.log(fileName);
@@ -98,20 +100,17 @@ document.addEventListener("DOMContentLoaded", function () {
 						// console.log("Папки:");
 						// console.log(courseFolders);
 
-						//! Если клик по активной ссылке
-						if (target.parentNode.classList.contains("link.active")) {
+						//! Если простой мисклик
+						if (target.classList.value == "") {
 							e.preventDefault();
-
+							//! Если клик по активной ссылке то ничего не делаем
+						} else if (target.parentNode.classList.value == "link active") {
+							e.preventDefault();
+							removeAllActiveClass(".link.active");
+							removeAllActiveClass(".table__row.active");
+							removeAllSubFolders(".sub-folder__list", target);
 							//! Если клик по видео
 						} else if (fileName.substr(-4) == ".mp4") {
-							//* Toggle Classes
-							// if (!target.classList.contains("sub-folder__link")) {
-							// 	removeAllActiveClass(".link.active");
-							// 	removeAllActiveClass(".table__row.active");
-							// 	addActiveClass(target.parentNode);
-							// 	addActiveClass(target.parentNode.parentNode);
-							// }
-
 							removeVideo();
 							videoCreator(target, courseTitle, fileName, subFolder, subFoldersCount, subSubFolderName);
 							toggle(target);
@@ -125,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						} else {
 							//! Если клик по подпапке
 							if (!target.classList.contains("sub-folder__link")) {
+								removeAllSubFolders(".sub-folder__list", target.nextElementSibling);
 								addSubFolders(target, obj[fileName]);
 
 								//* Toggle Classes

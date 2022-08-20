@@ -9,8 +9,7 @@ function videoCreator(target, Folder, VideoFile, subFolderName, subFoldersCount,
 	if (subFoldersCount <= 1) {
 		if (subFolderName.nodeValue == "\n\t\t\t\t") {
 			console.log("No subfolders");
-			console.log("Main Folder: " + Folder);
-			console.log("File Name: " + VideoFile);
+
 			videoWrapper.innerHTML = `
 				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
 					<source src="../data/Курсы/${Folder}/${VideoFile}" type="video/mp4" />
@@ -23,7 +22,9 @@ function videoCreator(target, Folder, VideoFile, subFolderName, subFoldersCount,
 			`;
 		} else {
 			console.log("Subfolders here");
-			subFolderName = subFolderName.textContent;
+
+			subFolderName = subFolderName.innerText;
+
 			videoWrapper.innerHTML = `
 				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
 					<source src="../data/Курсы/${Folder}/${subFolderName}/${VideoFile}" type="video/mp4" />

@@ -123,7 +123,6 @@ function checkFileType(file) {
 		}
 	});
 
-	console.log(x);
 	return x;
 }
 
@@ -243,6 +242,31 @@ module.exports = openFile;
 
 /***/ }),
 
+/***/ "./modules/removeAllSubFolders.js":
+/*!****************************************!*\
+  !*** ./modules/removeAllSubFolders.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+// Убираем подпапки
+function removeAllSubFolders(Selector, targetedEl) {
+	let subFoldersList = document.querySelectorAll(Selector);
+
+	for (let i = 0; i < subFoldersList.length; i++) {
+		let el = subFoldersList[i];
+
+		if (el == targetedEl) {
+		} else {
+			el.remove();
+		}
+	}
+}
+
+module.exports = removeAllSubFolders;
+
+
+/***/ }),
+
 /***/ "./modules/removeSubFolders.js":
 /*!*************************************!*\
   !*** ./modules/removeSubFolders.js ***!
@@ -358,8 +382,7 @@ function videoCreator(target, Folder, VideoFile, subFolderName, subFoldersCount,
 	if (subFoldersCount <= 1) {
 		if (subFolderName.nodeValue == "\n\t\t\t\t") {
 			console.log("No subfolders");
-			console.log("Main Folder: " + Folder);
-			console.log("File Name: " + VideoFile);
+
 			videoWrapper.innerHTML = `
 				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
 					<source src="../data/Курсы/${Folder}/${VideoFile}" type="video/mp4" />
@@ -372,7 +395,9 @@ function videoCreator(target, Folder, VideoFile, subFolderName, subFoldersCount,
 			`;
 		} else {
 			console.log("Subfolders here");
-			subFolderName = subFolderName.textContent;
+
+			subFolderName = subFolderName.innerText;
+
 			videoWrapper.innerHTML = `
 				<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="" data-setup="{}">
 					<source src="../data/Курсы/${Folder}/${subFolderName}/${VideoFile}" type="video/mp4" />
@@ -467,6 +492,7 @@ var __webpack_exports__ = {};
 /*!*************************!*\
   !*** ./pages/script.js ***!
   \*************************/
+//! Не забыть прописать в консоли Npx Webpack перед внесением изменений
 const contentCreator = __webpack_require__(/*! ../modules/contentCreator */ "./modules/contentCreator.js");
 const videoCreator = __webpack_require__(/*! ../modules/videoCreator */ "./modules/videoCreator.js");
 const openFile = __webpack_require__(/*! ../modules/openFile.js */ "./modules/openFile.js");
@@ -474,6 +500,7 @@ const toggle = __webpack_require__(/*! ../modules/toggle */ "./modules/toggle.js
 const scrollTo = __webpack_require__(/*! ../modules/scrollAnimation */ "./modules/scrollAnimation.js");
 const addSubFolders = __webpack_require__(/*! ../modules/addSubFolders */ "./modules/addSubFolders.js");
 const removeSubFolders = __webpack_require__(/*! ../modules/removeSubFolders */ "./modules/removeSubFolders.js");
+const removeAllSubFolders = __webpack_require__(/*! ../modules/removeAllSubFolders */ "./modules/removeAllSubFolders.js");
 const removeVideo = __webpack_require__(/*! ../modules/videoRemover */ "./modules/videoRemover.js");
 const addActiveClassToSubFolders = __webpack_require__(/*! ../modules/subFoldersActiveClassEditor.js */ "./modules/subFoldersActiveClassEditor.js");
 // const addActiveClass = require("../modules/addActiveClass.js");
@@ -555,8 +582,8 @@ document.addEventListener("DOMContentLoaded", function () {
 						}
 
 						//? Logger
-						// console.log("Клик по:");
-						// console.log(target);
+						console.log("Клик по:");
+						console.log(target);
 
 						// console.log("Файл:");
 						// console.log(fileName);
@@ -567,20 +594,17 @@ document.addEventListener("DOMContentLoaded", function () {
 						// console.log("Папки:");
 						// console.log(courseFolders);
 
-						//! Если клик по активной ссылке
-						if (target.parentNode.classList.contains("link.active")) {
+						//! Если простой мисклик
+						if (target.classList.value == "") {
 							e.preventDefault();
-
+							//! Если клик по активной ссылке то ничего не делаем
+						} else if (target.parentNode.classList.value == "link active") {
+							e.preventDefault();
+							removeAllActiveClass(".link.active");
+							removeAllActiveClass(".table__row.active");
+							removeAllSubFolders(".sub-folder__list", target);
 							//! Если клик по видео
 						} else if (fileName.substr(-4) == ".mp4") {
-							//* Toggle Classes
-							// if (!target.classList.contains("sub-folder__link")) {
-							// 	removeAllActiveClass(".link.active");
-							// 	removeAllActiveClass(".table__row.active");
-							// 	addActiveClass(target.parentNode);
-							// 	addActiveClass(target.parentNode.parentNode);
-							// }
-
 							removeVideo();
 							videoCreator(target, courseTitle, fileName, subFolder, subFoldersCount, subSubFolderName);
 							toggle(target);
@@ -594,6 +618,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						} else {
 							//! Если клик по подпапке
 							if (!target.classList.contains("sub-folder__link")) {
+								removeAllSubFolders(".sub-folder__list", target.nextElementSibling);
 								addSubFolders(target, obj[fileName]);
 
 								//* Toggle Classes

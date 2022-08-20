@@ -42,7 +42,6 @@ function checkFileType(file) {
 		}
 	});
 
-	console.log(x);
 	return x;
 }
 
