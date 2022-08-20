@@ -201,6 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function addActiveClass(Selector) {
+		console.log(Selector);
+
 		let target = document.querySelector(Selector);
 		target.classList.add("active");
 	}
@@ -356,12 +358,12 @@ document.addEventListener("DOMContentLoaded", function () {
 							//! Если клик по видео
 						} else if (fileName.substr(-4) == ".mp4") {
 							//* Toggle Classes
-							if (!target.classList.contains("sub-folder__link")) {
-								removeAllActiveClass(".link.active");
-								removeAllActiveClass(".table__row.active");
-								addActiveClass(target.parentNode);
-								addActiveClass(target.parentNode.parentNode);
-							}
+							// if (!target.classList.contains("sub-folder__link")) {
+							// 	removeAllActiveClass(".link.active");
+							// 	removeAllActiveClass(".table__row.active");
+							// 	addActiveClass(target.parentNode);
+							// 	addActiveClass(target.parentNode.parentNode);
+							// }
 
 							removeVideo();
 							createVideo(target, courseTitle, fileName, subFolder, subFoldersCount, subSubFolderName);
@@ -409,9 +411,12 @@ document.addEventListener("DOMContentLoaded", function () {
 						} else {
 							//! Если клик по подпапке
 							if (!target.classList.contains("sub-folder__link")) {
-								removeSubFolders();
-
-								addSubFolders(target, obj[fileName]);
+								if (target.parentNode.classList.value == "link active") {
+									console.log("active");
+								} else {
+									removeSubFolders(".sub-folder__list", target.nextElementSibling);
+									addSubFolders(target, obj[fileName]);
+								}
 
 								//* Toggle Classes
 								removeAllActiveClass(".link.active");
