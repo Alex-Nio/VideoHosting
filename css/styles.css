@@ -331,3 +331,21 @@ a {
 	background-size: contain;
 	margin-right: 20px;
 }
+
+@media (max-width: 602px) {
+
+	.container {
+		width: 100%;
+		max-width: 580px;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+
+	.table__row {
+		margin: 0;
+	}
+
+	.sub-folder__item {
+		padding: 0 5px;
+	}
+}
