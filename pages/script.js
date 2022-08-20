@@ -9,7 +9,7 @@ const removeSubFolders = require("../modules/removeSubFolders");
 const removeAllSubFolders = require("../modules/removeAllSubFolders");
 const removeVideo = require("../modules/videoRemover");
 const addActiveClassToSubFolders = require("../modules/subFoldersActiveClassEditor.js");
-// const addActiveClass = require("../modules/addActiveClass.js");
+const addActiveClass = require("../modules/addActiveClass.js");
 const checkFileType = require("../modules/fileTypeChecker.js");
 const createIcons = require("../modules/iconsCreator.js");
 
@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
 						}
 
 						//? Logger
-						console.log("Клик по:");
-						console.log(target);
+						// console.log("Клик по:");
+						// console.log(target);
 
 						// console.log("Файл:");
 						// console.log(fileName);
@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 							removeAllSubFolders(".sub-folder__list", target);
 							//! Если клик по видео
 						} else if (fileName.substr(-4) == ".mp4") {
+							// addActiveClass(target);
 							removeVideo();
 							videoCreator(target, courseTitle, fileName, subFolder, subFoldersCount, subSubFolderName);
 							toggle(target);
@@ -144,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
 								e.preventDefault();
 
 								addSubFolders(target, obj[fileName]);
-
 								let scrollTarget = ".sub-folder__link";
 								scrollTo(scrollTarget);
 							}

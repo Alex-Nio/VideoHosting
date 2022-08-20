@@ -1,6 +1,24 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./modules/addActiveClass.js":
+/*!***********************************!*\
+  !*** ./modules/addActiveClass.js ***!
+  \***********************************/
+/***/ ((module) => {
+
+function addActiveClass(Selector) {
+	console.log(Selector);
+
+	let target = document.querySelector(Selector);
+	target.classList.add("active");
+}
+
+module.exports = addActiveClass;
+
+
+/***/ }),
+
 /***/ "./modules/addSubFolders.js":
 /*!**********************************!*\
   !*** ./modules/addSubFolders.js ***!
@@ -503,7 +521,7 @@ const removeSubFolders = __webpack_require__(/*! ../modules/removeSubFolders */ 
 const removeAllSubFolders = __webpack_require__(/*! ../modules/removeAllSubFolders */ "./modules/removeAllSubFolders.js");
 const removeVideo = __webpack_require__(/*! ../modules/videoRemover */ "./modules/videoRemover.js");
 const addActiveClassToSubFolders = __webpack_require__(/*! ../modules/subFoldersActiveClassEditor.js */ "./modules/subFoldersActiveClassEditor.js");
-// const addActiveClass = require("../modules/addActiveClass.js");
+const addActiveClass = __webpack_require__(/*! ../modules/addActiveClass.js */ "./modules/addActiveClass.js");
 const checkFileType = __webpack_require__(/*! ../modules/fileTypeChecker.js */ "./modules/fileTypeChecker.js");
 const createIcons = __webpack_require__(/*! ../modules/iconsCreator.js */ "./modules/iconsCreator.js");
 
@@ -582,8 +600,8 @@ document.addEventListener("DOMContentLoaded", function () {
 						}
 
 						//? Logger
-						console.log("Клик по:");
-						console.log(target);
+						// console.log("Клик по:");
+						// console.log(target);
 
 						// console.log("Файл:");
 						// console.log(fileName);
@@ -605,6 +623,7 @@ document.addEventListener("DOMContentLoaded", function () {
 							removeAllSubFolders(".sub-folder__list", target);
 							//! Если клик по видео
 						} else if (fileName.substr(-4) == ".mp4") {
+							// addActiveClass(target);
 							removeVideo();
 							videoCreator(target, courseTitle, fileName, subFolder, subFoldersCount, subSubFolderName);
 							toggle(target);
@@ -638,7 +657,6 @@ document.addEventListener("DOMContentLoaded", function () {
 								e.preventDefault();
 
 								addSubFolders(target, obj[fileName]);
-
 								let scrollTarget = ".sub-folder__link";
 								scrollTo(scrollTarget);
 							}
