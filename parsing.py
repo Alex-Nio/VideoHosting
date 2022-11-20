@@ -80,6 +80,7 @@ for course in courses:
                         z[-4::] == ".pdf"
                         or z[-4::] == ".mp4"
                         or z[-4::] == ".wav"
+                        or z[-4::] == ".inf"
                         or z[-4::] == ".mp3"
                         or z[-3::] == ".py"
                         or z[-3::] == ".js"

@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function createTableRows(columns, values, i) {
-		// wtf
 		function createRow(col, vals) {
 			for (let i = 0; i < vals.length; i++) {
 				let val = vals[i],
@@ -39,8 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			count--;
 			let vals = values[count],
 				currentColumn = columns[count];
-			// console.log(columns[count]);
-			// console.log(values[count]);
+
 			createRow(currentColumn, vals);
 		}
 	}
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	table.addEventListener("click", function (e) {
 		let target = e.target;
 		console.log(localStorage.getItem("trigger_name"));
-		// e.preventDefault();
 
 		if (target.classList != "table__column") {
 			let trigger_name = target.textContent;
