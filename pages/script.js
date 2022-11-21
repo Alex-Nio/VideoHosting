@@ -12,14 +12,16 @@ const addActiveClassToSubFolders = require("../modules/subFoldersActiveClassEdit
 const addActiveClass = require("../modules/addActiveClass.js");
 const checkFileType = require("../modules/fileTypeChecker.js");
 const createIcons = require("../modules/iconsCreator.js");
+const { pop } = require("@jridgewell/set-array");
 
 let url = "./../data/video_content.json";
 
 document.addEventListener("DOMContentLoaded", function () {
 	const mainTitle = localStorage.getItem("trigger_name");
 
-	let titleBlock = document.querySelector("h1");
-	let coursesContentList = document.querySelector(".table__column");
+	let titleBlock = document.querySelector("h1"),
+		coursesContentList = document.querySelector(".table__column"),
+		ogg = document.createElement("audio");
 
 	titleBlock.innerHTML = mainTitle;
 
@@ -85,6 +87,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						if (subSubFolderName != null) {
 							subSubFolderName = subSubFolderName.firstElementChild.innerText;
+						}
+
+						if (fileName.substr(-4) == ".ogg") {
+							let popupClose = document.createElement("div"),
+								popup = document.createElement("div"),
+								popupWrapper = document.createElement("div");
+
+							function createAudio(targetedEl, fileNameText) {
+								let folderToFind = `../data/Курсы/${mainTitle}/${targetedEl.firstChild.parentElement.firstChild.parentElement}/${targetedEl.firstChild.parentElement.firstChild.parentElement.parentElement.parentElement.parentElement.parentElement.previousElementSibling.textContent}/${targetedEl.parentElement.parentElement.previousElementSibling.textContent}/${fileNameText}`;
+
+								ogg.setAttribute("controls", "true");
+
+								ogg.innerHTML = `
+										<source src="${folderToFind}" type="audio/ogg"> 
+									`;
+							}
+
+							function createPopup(targetedEl, fileNameText) {
+								popup.classList.add("popup"),
+									popupClose.classList.add("popup-close"),
+									popupWrapper.classList.add("popup-wrapper");
+
+								document.querySelector("body").append(popup);
+								popup.append(popupClose);
+								popup.append(popupWrapper);
+
+								ogg.load();
+								createAudio(targetedEl, fileNameText);
+
+								popupWrapper.append(ogg);
+							}
+
+							function destroy() {
+								document.querySelectorAll(".popup").forEach((item) => {
+									item.remove();
+								});
+							}
+
+							destroy();
+							createPopup(target, fileName);
+
+							popupClose.addEventListener("click", function () {
+								popup.remove();
+							});
 						}
 
 						//? Logger
@@ -153,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						//! Подсветка активной подпапки
 						if (
 							target.classList.contains("sub-folder__link") &&
+							target.nextElementSibling != null &&
 							target.nextElementSibling.classList.contains("sub-folder__list")
 						) {
 							removeAllActiveClass(".sub-folder__list.active");

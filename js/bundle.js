@@ -229,8 +229,6 @@ module.exports = createIcons;
 function openFile(target, Folder, subFolderName, FileName, subFoldersCount, subSubFolderName) {
 	let str;
 
-	// console.log(target);
-
 	if (subFoldersCount <= 1) {
 		if (subFolderName.nodeValue == "\n\t\t\t\t") {
 			str = `../data/Курсы/${Folder}/${FileName}`;
@@ -238,19 +236,19 @@ function openFile(target, Folder, subFolderName, FileName, subFoldersCount, subS
 				target.parentNode.setAttribute("href", str);
 			}
 			target.setAttribute("href", str);
-			console.log("Путь к файлу: " + str);
+			// console.log("Путь к файлу: " + str);
 		} else {
 			subFolderName = subFolderName.textContent;
 			str = `../data/Курсы/${Folder}/${subFolderName}/${FileName}`;
 			target.setAttribute("href", str);
-			console.log("Путь к файлу: " + str);
+			// console.log("Путь к файлу: " + str);
 		}
 	} else if (subFoldersCount >= 2) {
 		if (subSubFolderName != undefined) {
 			subFolderName = subFolderName.textContent;
 			str = `../data/Курсы/${Folder}/${subSubFolderName}/${subFolderName}/${FileName}`;
 			target.setAttribute("href", str);
-			console.log("Путь к файлу: " + str);
+			// console.log("Путь к файлу: " + str);
 		}
 	}
 }
@@ -475,6 +473,73 @@ function removeVideo() {
 module.exports = removeVideo;
 
 
+/***/ }),
+
+/***/ "./node_modules/@jridgewell/set-array/dist/set-array.umd.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@jridgewell/set-array/dist/set-array.umd.js ***!
+  \******************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+(function (global, factory) {
+     true ? factory(exports) :
+    0;
+})(this, (function (exports) { 'use strict';
+
+    /**
+     * Gets the index associated with `key` in the backing array, if it is already present.
+     */
+    exports.get = void 0;
+    /**
+     * Puts `key` into the backing array, if it is not already present. Returns
+     * the index of the `key` in the backing array.
+     */
+    exports.put = void 0;
+    /**
+     * Pops the last added item out of the SetArray.
+     */
+    exports.pop = void 0;
+    /**
+     * SetArray acts like a `Set` (allowing only one occurrence of a string `key`), but provides the
+     * index of the `key` in the backing array.
+     *
+     * This is designed to allow synchronizing a second array with the contents of the backing array,
+     * like how in a sourcemap `sourcesContent[i]` is the source content associated with `source[i]`,
+     * and there are never duplicates.
+     */
+    class SetArray {
+        constructor() {
+            this._indexes = { __proto__: null };
+            this.array = [];
+        }
+    }
+    (() => {
+        exports.get = (strarr, key) => strarr._indexes[key];
+        exports.put = (strarr, key) => {
+            // The key may or may not be present. If it is present, it's a number.
+            const index = exports.get(strarr, key);
+            if (index !== undefined)
+                return index;
+            const { array, _indexes: indexes } = strarr;
+            return (indexes[key] = array.push(key) - 1);
+        };
+        exports.pop = (strarr) => {
+            const { array, _indexes: indexes } = strarr;
+            if (array.length === 0)
+                return;
+            const last = array.pop();
+            indexes[last] = undefined;
+        };
+    })();
+
+    exports.SetArray = SetArray;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+}));
+//# sourceMappingURL=set-array.umd.js.map
+
+
 /***/ })
 
 /******/ 	});
@@ -497,7 +562,7 @@ module.exports = removeVideo;
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -524,14 +589,16 @@ const addActiveClassToSubFolders = __webpack_require__(/*! ../modules/subFolders
 const addActiveClass = __webpack_require__(/*! ../modules/addActiveClass.js */ "./modules/addActiveClass.js");
 const checkFileType = __webpack_require__(/*! ../modules/fileTypeChecker.js */ "./modules/fileTypeChecker.js");
 const createIcons = __webpack_require__(/*! ../modules/iconsCreator.js */ "./modules/iconsCreator.js");
+const { pop } = __webpack_require__(/*! @jridgewell/set-array */ "./node_modules/@jridgewell/set-array/dist/set-array.umd.js");
 
 let url = "./../data/video_content.json";
 
 document.addEventListener("DOMContentLoaded", function () {
 	const mainTitle = localStorage.getItem("trigger_name");
 
-	let titleBlock = document.querySelector("h1");
-	let coursesContentList = document.querySelector(".table__column");
+	let titleBlock = document.querySelector("h1"),
+		coursesContentList = document.querySelector(".table__column"),
+		ogg = document.createElement("audio");
 
 	titleBlock.innerHTML = mainTitle;
 
@@ -597,6 +664,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						if (subSubFolderName != null) {
 							subSubFolderName = subSubFolderName.firstElementChild.innerText;
+						}
+
+						if (fileName.substr(-4) == ".ogg") {
+							let popupClose = document.createElement("div"),
+								popup = document.createElement("div"),
+								popupWrapper = document.createElement("div");
+
+							function createAudio(targetedEl, fileNameText) {
+								let folderToFind = `../data/Курсы/${mainTitle}/${targetedEl.firstChild.parentElement.firstChild.parentElement}/${targetedEl.firstChild.parentElement.firstChild.parentElement.parentElement.parentElement.parentElement.parentElement.previousElementSibling.textContent}/${targetedEl.parentElement.parentElement.previousElementSibling.textContent}/${fileNameText}`;
+
+								ogg.setAttribute("controls", "true");
+
+								ogg.innerHTML = `
+										<source src="${folderToFind}" type="audio/ogg"> 
+									`;
+							}
+
+							function createPopup(targetedEl, fileNameText) {
+								popup.classList.add("popup"),
+									popupClose.classList.add("popup-close"),
+									popupWrapper.classList.add("popup-wrapper");
+
+								document.querySelector("body").append(popup);
+								popup.append(popupClose);
+								popup.append(popupWrapper);
+
+								ogg.load();
+								createAudio(targetedEl, fileNameText);
+
+								popupWrapper.append(ogg);
+							}
+
+							function destroy() {
+								document.querySelectorAll(".popup").forEach((item) => {
+									item.remove();
+								});
+							}
+
+							destroy();
+							createPopup(target, fileName);
+
+							popupClose.addEventListener("click", function () {
+								popup.remove();
+							});
 						}
 
 						//? Logger
@@ -665,6 +776,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						//! Подсветка активной подпапки
 						if (
 							target.classList.contains("sub-folder__link") &&
+							target.nextElementSibling != null &&
 							target.nextElementSibling.classList.contains("sub-folder__list")
 						) {
 							removeAllActiveClass(".sub-folder__list.active");
