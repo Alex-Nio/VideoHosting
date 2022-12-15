@@ -21,7 +21,10 @@
 			"03. Что такое Nmap.mp4",
 			"04. Цели и задачи  курса.mp4"
 		],
-		"02. Памятка по Nmap": ["05. Памятка по Nmap.mp4", "Памятка по Nmap 0.6.pdf"],
+		"02. Памятка по Nmap": [
+			"05. Памятка по Nmap.mp4",
+			"Памятка по Nmap 0.6.pdf"
+		],
 		"03. Установка Nmap": [
 			"06. Цели и задачи обучения.mp4",
 			"07. Как установить Nmap.mp4",
@@ -87,7 +90,11 @@
 	},
 	{
 		"Название курса": "Unity Продвинутый курс",
-		"Папки": ["Материалы", "Проект курса", "Уроки"],
+		"Папки": [
+			"Материалы",
+			"Проект курса",
+			"Уроки"
+		],
 		"Материалы": [
 			"Animated_BFS.gif",
 			"AudioFX",
@@ -95,8 +102,16 @@
 			"Font.TTF",
 			"TowerDefense_prefabs.unitypackage"
 		],
-		"AudioFX": ["AA Theme Reversed.ogg", "SFX Ouch.ogg", "SFX Pew.ogg", "SFX Pow.ogg", "SFX Zoop.ogg"],
-		"Проект курса": ["us_TowerDefense.zip"],
+		"AudioFX": [
+			"AA Theme Reversed.ogg",
+			"SFX Ouch.ogg",
+			"SFX Pew.ogg",
+			"SFX Pow.ogg",
+			"SFX Zoop.ogg"
+		],
+		"Проект курса": [
+			"us_TowerDefense.zip"
+		],
 		"Уроки": [
 			"Урок 0 - Об этом курсе.mp4",
 			"Урок 1 - Unity NavMesh или собственный алгоритм поиска пути.mp4",
@@ -325,6 +340,7 @@
 		"Папки": [],
 		"Файлы": [
 			"001.mp4",
+			"001.mp4",
 			"002.mp4",
 			"003.mp4",
 			"004.mp4",
@@ -346,7 +362,10 @@
 	},
 	{
 		"Название курса": "[WebForMySelf] Фреймворк Vue.js",
-		"Папки": ["videokurs"],
+		"Папки": [
+			"start.html",
+			"videokurs"
+		],
 		"videokurs": [
 			"bonus1",
 			"bonus2",
@@ -503,8 +522,15 @@
 			"bonus5_7.html",
 			"bonus5_8.html"
 		],
-		"bonus6": ["1.mp4", "2.mp4", "bonus6_1.html", "bonus6_2.html"],
-		"css": ["style.css"],
+		"bonus6": [
+			"1.mp4",
+			"2.mp4",
+			"bonus6_1.html",
+			"bonus6_2.html"
+		],
+		"css": [
+			"style.css"
+		],
 		"fonts": [
 			"MuseoSansBlack",
 			"MuseoSansBold",
@@ -545,7 +571,12 @@
 			"shadow-small.png",
 			"shadow.png"
 		],
-		"js": ["jq.js", "script.js", "scriptsec.js", "scriptsec2.js"],
+		"js": [
+			"jq.js",
+			"script.js",
+			"scriptsec.js",
+			"scriptsec2.js"
+		],
 		"part1": [
 			"block1",
 			"block2",
@@ -594,10 +625,32 @@
 	},
 	{
 		"Название курса": "[Дмитрий Лаврик] Vue.js",
-		"Папки": ["Урок 1", "Урок 2", "Урок 3", "Урок 4", "Урок 5", "Урок 6", "Урок 7", "Урок 8"],
-		"Урок 1": ["vue-1-1.mp4", "vue-1-2.mp4", "vue-lesson1-hw.txt", "vue-lesson1-src.zip"],
-		"Урок 2": ["vue-2.mp4", "vue-lesson2-hw.txt", "vue-lesson2-src.zip"],
-		"Урок 3": ["vue-3.mp4", "vue-lesson3-hw.txt", "vue-lesson3-src.zip"],
+		"Папки": [
+			"Урок 1",
+			"Урок 2",
+			"Урок 3",
+			"Урок 4",
+			"Урок 5",
+			"Урок 6",
+			"Урок 7",
+			"Урок 8"
+		],
+		"Урок 1": [
+			"vue-1-1.mp4",
+			"vue-1-2.mp4",
+			"vue-lesson1-hw.txt",
+			"vue-lesson1-src.zip"
+		],
+		"Урок 2": [
+			"vue-2.mp4",
+			"vue-lesson2-hw.txt",
+			"vue-lesson2-src.zip"
+		],
+		"Урок 3": [
+			"vue-3.mp4",
+			"vue-lesson3-hw.txt",
+			"vue-lesson3-src.zip"
+		],
 		"Урок 4": [
 			"vue-4-1.mp4",
 			"vue-4-2.mp4",
@@ -605,20 +658,51 @@
 			"vue-lesson4-src-cli.zip",
 			"vue-lesson4-src.zip"
 		],
-		"Урок 5": ["vue-5-1.mp4", "vue-5-2.mp4", "vue-l5-cli.zip", "vue-lesson5_src.zip"],
-		"Урок 6": ["vue-6-1.mp4", "vue-6-2.mp4", "vue-lesson6-hw.txt", "vue-lesson6-src.zip"],
-		"Урок 7": ["vue-7.mp4", "vue-lesson7-hw.txt", "vue-lesson7-src.zip"],
-		"Урок 8": ["vue-8.mp4", "vue-lesson8_src.zip"]
+		"Урок 5": [
+			"vue-5-1.mp4",
+			"vue-5-2.mp4",
+			"vue-l5-cli.zip",
+			"vue-lesson5_src.zip"
+		],
+		"Урок 6": [
+			"vue-6-1.mp4",
+			"vue-6-2.mp4",
+			"vue-lesson6-hw.txt",
+			"vue-lesson6-src.zip"
+		],
+		"Урок 7": [
+			"vue-7.mp4",
+			"vue-lesson7-hw.txt",
+			"vue-lesson7-src.zip"
+		],
+		"Урок 8": [
+			"vue-8.mp4",
+			"vue-lesson8_src.zip"
+		]
 	},
 	{
 		"Название курса": "Атака и защита веб и мобильных приложений",
-		"Папки": ["Урок 1", "Урок 2", "Урок 3", "Урок 4", "Урок 5", "Урок 6", "Урок 7", "Урок 8"],
+		"Папки": [
+			"Урок 1",
+			"Урок 2",
+			"Урок 3",
+			"Урок 4",
+			"Урок 5",
+			"Урок 6",
+			"Урок 7",
+			"Урок 8"
+		],
 		"Урок 1": [
 			"1.mp4",
 			"6cede32250df5d1829f22380d0d254cefb56702c.pdf",
 			"Урок_номер_1._Информационная_безопасность..pdf"
 		],
-		"Урок 2": ["2.mp4", "A1 -+Injection.txt", "A2 -+Broken+Authentication.txt", "Атака_и_защита_сайтов_Урок_2.pdf"],
+		"Урок 2": [
+			"2.mp4",
+			"A1 -+Injection.txt",
+			"A2 -+Broken+Authentication.txt",
+			"Атака_и_защита_сайтов_Урок_2.pdf"
+		],
 		"Урок 3": [
 			"3.mp4",
 			"A2 -+Broken+Authentication.txt",
@@ -626,9 +710,18 @@
 			"ScreenCaptureProject2.mp4",
 			"урок_3_Информационная_безопасность.pdf"
 		],
-		"Урок 4": ["4.mp4", "урок_4_%281%29.pdf"],
-		"Урок 5": ["5.mp4", "Урок_5_%281%29.pdf"],
-		"Урок 6": ["6.mp4", "урок_6_%283%29.pdf"],
+		"Урок 4": [
+			"4.mp4",
+			"урок_4_%281%29.pdf"
+		],
+		"Урок 5": [
+			"5.mp4",
+			"Урок_5_%281%29.pdf"
+		],
+		"Урок 6": [
+			"6.mp4",
+			"урок_6_%283%29.pdf"
+		],
 		"Урок 7": [
 			"7.mp4",
 			"dex2jar-2.0",
@@ -660,12 +753,20 @@
 			"d2j_invoke.sh",
 			"lib"
 		],
-		"Урок 8": ["8.mp4", "Дополнение к+методичке.docx", "Урок_8_%281%29.pdf"]
+		"Урок 8": [
+			"8.mp4",
+			"Дополнение к+методичке.docx",
+			"Урок_8_%281%29.pdf"
+		]
 	},
 	{
 		"Название курса": "WireShark от начального до продвинутого уровня (2017)",
 		"Папки": [],
-		"Файлы": ["Полный курс по WireShark 1.mp4", "Полный курс по WireShark 2.mp4", "Полный курс по WireShark 3.mp4"]
+		"Файлы": [
+			"Полный курс по WireShark 1.mp4",
+			"Полный курс по WireShark 2.mp4",
+			"Полный курс по WireShark 3.mp4"
+		]
 	},
 	{
 		"Название курса": "[CMS InSales] Движок Liquid и прочее",
@@ -738,38 +839,147 @@
 			"40 QnA",
 			"дополнительные материалы"
 		],
-		"01 Технические детали курса": ["01.mp4", "ДЗ.txt", "Дополнительные материалы.txt", "слайды.zip"],
-		"02 Объекты и переменные": ["02.mp4", "дополнительные материалы.txt", "слайды.zip"],
-		"03 Принципы ООП": ["03.mp4", "ДЗ.txt", "дополнительные материалы.txt", "слайды.zip"],
-		"04 IP, TCP, uWSGI": ["04.mp4", "ДЗ.txt", "дополнительные материалы.txt", "слайды.zip"],
-		"05 werkzeug, Flask": ["05.mp4", "chat.txt", "ДЗ.txt", "материалы к занятию.txt", "слайды.zip"],
-		"06 ORM": ["06.mp4", "ДЗ.txt", "слайды.zip"],
-		"07 Django": ["07.mp4", "chat.txt", "ДЗ.txt", "материалы.txt"],
-		"08 реализуем свой WSGI-совместимый фреймворк": ["08.mp4", "chat.txt", "server.py"],
-		"09 Django REST Framework. Django Configurations": ["09.mp4", "chat.txt", "материалы.txt"],
-		"10 API. GraphQL": ["10.mp4", "материалы.txt"],
-		"11 Fabric": ["11.mp4", "deploy.tar.gz", "Дополнительные материалы.txt"],
-		"12 Софтскилз": ["12.mp4", "слайды.zip"],
-		"13 Знакомство с Front-end частью курса": ["13.mp4", "ДЗ.txt", "Дополнительные материалы.txt", "слайды.zip"],
-		"14 Djngo m2m": ["14.mp4", "Дополнительные материалы.txt"],
-		"15 Основы JS": ["15.mp4", "ДЗ.txt", "слайды.zip"],
-		"16 Django ORM": ["16.mp4", "Дополнительные материалы.txt"],
-		"17 Продвинутый JS": ["17.mp4", "ДЗ.txt"],
-		"18 Азы работы с очередями": ["18.mp4", "redis for windows.txt", "ДЗ.txt", "код с курса.txt"],
-		"19 ES6, NodeJS окружение, babel+webpack": ["19.webm", "ДЗ.txt", "дополнительные материалы.txt", "слайды.zip"],
-		"21 fetch axios": ["21.mp4", "ДЗ.txt", "слайды.zip"],
-		"22 Автотесты": ["22.mp4", "ДЗ.txt", "слайды.zip"],
-		"23 Code review": ["23.mp4", "ДЗ.txt"],
-		"24 Основы React, JSX, компоненты React": ["24.mp4", "ДЗ.txt", "дополнительные материалы.txt", "слайды.zip"],
-		"25 Введение в TDD": ["25.mp4", "chat.txt", "дополнительные материалы.txt"],
+		"01 Технические детали курса": [
+			"01.mp4",
+			"ДЗ.txt",
+			"Дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"02 Объекты и переменные": [
+			"02.mp4",
+			"дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"03 Принципы ООП": [
+			"03.mp4",
+			"ДЗ.txt",
+			"дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"04 IP, TCP, uWSGI": [
+			"04.mp4",
+			"ДЗ.txt",
+			"дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"05 werkzeug, Flask": [
+			"05.mp4",
+			"chat.txt",
+			"ДЗ.txt",
+			"материалы к занятию.txt",
+			"слайды.zip"
+		],
+		"06 ORM": [
+			"06.mp4",
+			"ДЗ.txt",
+			"слайды.zip"
+		],
+		"07 Django": [
+			"07.mp4",
+			"chat.txt",
+			"ДЗ.txt",
+			"материалы.txt"
+		],
+		"08 реализуем свой WSGI-совместимый фреймворк": [
+			"08.mp4",
+			"chat.txt",
+			"server.py"
+		],
+		"09 Django REST Framework. Django Configurations": [
+			"09.mp4",
+			"chat.txt",
+			"материалы.txt"
+		],
+		"10 API. GraphQL": [
+			"10.mp4",
+			"материалы.txt"
+		],
+		"11 Fabric": [
+			"11.mp4",
+			"deploy.tar.gz",
+			"Дополнительные материалы.txt"
+		],
+		"12 Софтскилз": [
+			"12.mp4",
+			"слайды.zip"
+		],
+		"13 Знакомство с Front-end частью курса": [
+			"13.mp4",
+			"ДЗ.txt",
+			"Дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"14 Djngo m2m": [
+			"14.mp4",
+			"Дополнительные материалы.txt"
+		],
+		"15 Основы JS": [
+			"15.mp4",
+			"ДЗ.txt",
+			"слайды.zip"
+		],
+		"16 Django ORM": [
+			"16.mp4",
+			"Дополнительные материалы.txt"
+		],
+		"17 Продвинутый JS": [
+			"17.mp4",
+			"ДЗ.txt"
+		],
+		"18 Азы работы с очередями": [
+			"18.mp4",
+			"redis for windows.txt",
+			"ДЗ.txt",
+			"код с курса.txt"
+		],
+		"19 ES6, NodeJS окружение, babel+webpack": [
+			"19.webm",
+			"ДЗ.txt",
+			"дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"21 fetch axios": [
+			"21.mp4",
+			"ДЗ.txt",
+			"слайды.zip"
+		],
+		"22 Автотесты": [
+			"22.mp4",
+			"ДЗ.txt",
+			"слайды.zip"
+		],
+		"23 Code review": [
+			"23.mp4",
+			"ДЗ.txt"
+		],
+		"24 Основы React, JSX, компоненты React": [
+			"24.mp4",
+			"ДЗ.txt",
+			"дополнительные материалы.txt",
+			"слайды.zip"
+		],
+		"25 Введение в TDD": [
+			"25.mp4",
+			"chat.txt",
+			"дополнительные материалы.txt"
+		],
 		"26 State и Props, data-flow в React-компонентах": [
 			"26.mp4",
 			"chat.txt",
 			"ДЗ.txt",
 			"дополнительные материалы.txt"
 		],
-		"27 Введение в pytest": ["27.mp4", "ДЗ.txt", "материалы к занятию", "чат.txt"],
-		"материалы к занятию": ["database.py", "solver.py", "tests"],
+		"27 Введение в pytest": [
+			"27.mp4",
+			"ДЗ.txt",
+			"материалы к занятию",
+			"чат.txt"
+		],
+		"материалы к занятию": [
+			"database.py",
+			"solver.py",
+			"tests"
+		],
 		"28 Жизненный цикл React-компонент": [
 			"28.mp4",
 			"Демо проект на CodePen.txt",
@@ -778,7 +988,11 @@
 			"запись чата.txt",
 			"Состояние и жизненный цикл React.txt"
 		],
-		"29 InfluxDB, Grafana": ["29.mp4", "ДЗ.txt", "дополнительные материалы.txt"],
+		"29 InfluxDB, Grafana": [
+			"29.mp4",
+			"ДЗ.txt",
+			"дополнительные материалы.txt"
+		],
 		"30 Состояние приложений. Flus and Redux": [
 			"30.mp4",
 			"chat.txt",
@@ -786,11 +1000,34 @@
 			"дополнительные материалы.txt",
 			"слайды.pdf"
 		],
-		"31 Jenkins, Sentry": ["31.mp4", "ДЗ.txt", "дополнительные материалы.txt"],
-		"32 Code review": ["32.mp4", "chat.txt", "ДЗ.txt", "дополнительные материалы.txt"],
-		"33 aiogram": ["33.mp4", "chat.txt", "дополнительные материалы.txt"],
-		"34 Routing in React. SPA": ["34.mp4", "chat.txt", "ДЗ.txt", "дополнительные материалы.txt", "слайды.pdf"],
-		"35 threading, multiprocessing, queue": ["35.mp4", "chat.txt", "дополнительные материалы.txt"],
+		"31 Jenkins, Sentry": [
+			"31.mp4",
+			"ДЗ.txt",
+			"дополнительные материалы.txt"
+		],
+		"32 Code review": [
+			"32.mp4",
+			"chat.txt",
+			"ДЗ.txt",
+			"дополнительные материалы.txt"
+		],
+		"33 aiogram": [
+			"33.mp4",
+			"chat.txt",
+			"дополнительные материалы.txt"
+		],
+		"34 Routing in React. SPA": [
+			"34.mp4",
+			"chat.txt",
+			"ДЗ.txt",
+			"дополнительные материалы.txt",
+			"слайды.pdf"
+		],
+		"35 threading, multiprocessing, queue": [
+			"35.mp4",
+			"chat.txt",
+			"дополнительные материалы.txt"
+		],
 		"36 Тестирование JS приложений": [
 			"36.mp4",
 			"chat.txt",
@@ -799,10 +1036,27 @@
 			"дополнительные материалы.txt",
 			"слайды.pdf"
 		],
-		"37 Введение в Docker, Docker-compose": ["37.mp4", "ДЗ.txt", "дополнительные материалы.txt"],
-		"38 Обзор Vue2": ["38.mp4", "chat.txt", "ДЗ.txt", "дополнительные материалы.txt", "слайды.pdf"],
-		"39 asyncio": ["39.mp4", "Дополнительные материалы.txt"],
-		"40 QnA": ["40.mp4", "chat.txt", "Итоговый_вебинар.pdf"],
+		"37 Введение в Docker, Docker-compose": [
+			"37.mp4",
+			"ДЗ.txt",
+			"дополнительные материалы.txt"
+		],
+		"38 Обзор Vue2": [
+			"38.mp4",
+			"chat.txt",
+			"ДЗ.txt",
+			"дополнительные материалы.txt",
+			"слайды.pdf"
+		],
+		"39 asyncio": [
+			"39.mp4",
+			"Дополнительные материалы.txt"
+		],
+		"40 QnA": [
+			"40.mp4",
+			"chat.txt",
+			"Итоговый_вебинар.pdf"
+		],
 		"дополнительные материалы": [
 			"Django и методология 12 факторных приложений.mp4",
 			"инструменты визуализации данных.mp4"
@@ -887,7 +1141,10 @@
 			"Python для WEB разработки_ Занятие 7.mp4",
 			"Задание 6.txt"
 		],
-		"Занятие 08": ["Python для WEB разработки_ Занятие 8.mp4", "Код, который получился.txt"],
+		"Занятие 08": [
+			"Python для WEB разработки_ Занятие 8.mp4",
+			"Код, который получился.txt"
+		],
 		"Занятие 09": [
 			"OTUS — «Python для web‑разработки» – лекция 9.pdf",
 			"products_api_v1.py",
@@ -907,8 +1164,14 @@
 			"Python для WEB разработки_ Занятие 10.mp4",
 			"Python для WEB разработки_ Занятие 10.mp4.sfk"
 		],
-		"Занятие 11": ["otus_webdev_drf_blog-master.zip", "Python для WEB разработки_ Занятие 11.mp4"],
-		"Занятие 12": ["otus_webdev_graphql_shop-master.zip", "Python для WEB разработки_ Занятие 12.mp4"],
+		"Занятие 11": [
+			"otus_webdev_drf_blog-master.zip",
+			"Python для WEB разработки_ Занятие 11.mp4"
+		],
+		"Занятие 12": [
+			"otus_webdev_graphql_shop-master.zip",
+			"Python для WEB разработки_ Занятие 12.mp4"
+		],
 		"Занятие 13": [
 			"Fabric.txt",
 			"How To Set Up uWSGI and Nginx to Serve Python Apps on Ubuntu 14.04.txt",
@@ -919,31 +1182,64 @@
 			"OTUS — «Python для web‑разработки» – занятие 14.pdf",
 			"Python для WEB разработки_ Занятие 14.mp4"
 		],
-		"Занятие 15": ["12_otus_graphql.zip", "Python для WEB разработки_ Занятие 15.mp4"],
-		"Занятие 16": ["12_otus_graphql.zip", "Python для WEB разработки_ Занятие 16.mp4"],
-		"Занятие 17": ["12_otus_graphql.zip", "Python для WEB разработки_ Занятие 17.mp4"],
-		"Занятие 18": ["Python для WEB разработки_ Занятие 18.mp4"],
+		"Занятие 15": [
+			"12_otus_graphql.zip",
+			"Python для WEB разработки_ Занятие 15.mp4"
+		],
+		"Занятие 16": [
+			"12_otus_graphql.zip",
+			"Python для WEB разработки_ Занятие 16.mp4"
+		],
+		"Занятие 17": [
+			"12_otus_graphql.zip",
+			"Python для WEB разработки_ Занятие 17.mp4"
+		],
+		"Занятие 18": [
+			"Python для WEB разработки_ Занятие 18.mp4"
+		],
 		"Занятие 19": [
 			"currency_spiders-master.zip",
 			"Identifier-words-stats-master.zip",
 			"ims_project-master.zip",
 			"Python для WEB разработки_ Занятие 19.mp4"
 		],
-		"Занятие 20": ["Python для WEB разработки_ Занятие 20.mp4"],
-		"Занятие 21": ["Python для WEB разработки_ Занятие 21.mp4"],
-		"Занятие 22": ["Python для WEB разработки_ Занятие 22.mp4"],
+		"Занятие 20": [
+			"Python для WEB разработки_ Занятие 20.mp4"
+		],
+		"Занятие 21": [
+			"Python для WEB разработки_ Занятие 21.mp4"
+		],
+		"Занятие 22": [
+			"Python для WEB разработки_ Занятие 22.mp4"
+		],
 		"Занятие 24": [
 			"OTUS — «Python для web‑разработки» – занятие 14.pdf",
 			"Python для WEB разработки_ Занятие 24.mp4",
 			"Занятие 23"
 		],
-		"Занятие 23": ["otus_queue_manager-master.zip", "Python для WEB разработки_ Занятие 23.mp4"],
-		"Занятие 25": ["Python для WEB разработки_ Занятие 25.mp4", "solver_v0.2.py"],
-		"Занятие 26": ["Python для WEB разработки_ Занятие 26.mp4"],
-		"Занятие 27": ["Информация.txt"],
-		"Занятие 28": ["Python для WEB разработки_ Занятие 28.mp4"],
-		"Занятие 29": ["Python для WEB разработки_ Занятие 29.mp4"],
-		"Занятие 30": ["Python для WEB разработки_ Занятие 30.mp4"],
+		"Занятие 23": [
+			"otus_queue_manager-master.zip",
+			"Python для WEB разработки_ Занятие 23.mp4"
+		],
+		"Занятие 25": [
+			"Python для WEB разработки_ Занятие 25.mp4",
+			"solver_v0.2.py"
+		],
+		"Занятие 26": [
+			"Python для WEB разработки_ Занятие 26.mp4"
+		],
+		"Занятие 27": [
+			"Информация.txt"
+		],
+		"Занятие 28": [
+			"Python для WEB разработки_ Занятие 28.mp4"
+		],
+		"Занятие 29": [
+			"Python для WEB разработки_ Занятие 29.mp4"
+		],
+		"Занятие 30": [
+			"Python для WEB разработки_ Занятие 30.mp4"
+		],
 		"Занятие 31": [
 			"otus_avito_bot-master.zip",
 			"Python для WEB разработки_ Занятие 31, часть 1.mp4",
@@ -960,13 +1256,22 @@
 			"OTUS — «Python для web‑разработки» – занятие 14.pdf",
 			"Python для WEB разработки_ Занятие 33.mp4"
 		],
-		"Занятие 34": ["Python для WEB разработки_ Занятие 34.mp4"],
+		"Занятие 34": [
+			"Python для WEB разработки_ Занятие 34.mp4"
+		],
 		"Занятие 35": [
 			"OTUS — «Python для web‑разработки» – занятие 35.pdf",
 			"Python для WEB разработки_ Занятие 35.mp4"
 		],
-		"Занятие 36": ["app.py", "docker-compose.yml", "Dockerfile", "Python для WEB разработки_ Занятие 36.mp4"],
-		"Занятие 37": ["Python для WEB разработки_ Занятие 37.mp4"]
+		"Занятие 36": [
+			"app.py",
+			"docker-compose.yml",
+			"Dockerfile",
+			"Python для WEB разработки_ Занятие 36.mp4"
+		],
+		"Занятие 37": [
+			"Python для WEB разработки_ Занятие 37.mp4"
+		]
 	},
 	{
 		"Название курса": "[Pluralsight] Тестирование на проникновение в действии (2017) [RUS]",
@@ -979,8 +1284,12 @@
 			"6. Забираем домен",
 			"Приложения"
 		],
-		"1. Обзор курса": ["01. Обзор курса.mp4"],
-		"2. Вступление к курсу": ["02. Вступление к курсу.mp4"],
+		"1. Обзор курса": [
+			"01. Обзор курса.mp4"
+		],
+		"2. Вступление к курсу": [
+			"02. Вступление к курсу.mp4"
+		],
 		"3. Настройка виртуальной тестовой лаборатории для пентеста": [
 			"03. Введение.mp4",
 			"04. Источники угроз.mp4",
@@ -1019,12 +1328,28 @@
 			"31. Извлечение данных с PowerShell.mp4",
 			"32. Укрепление безопасности.mp4"
 		],
-		"Приложения": ["02", "03", "04", "05", "06"],
-		"02": ["course-introduction-slides.pdf"],
-		"03": ["setting-up-your-virtual-penetration-test-lab-slides.pdf"],
-		"04": ["initial-compromise-slides.pdf"],
-		"05": ["hunting-internal-targets-slides.pdf"],
-		"06": ["owning-the-domain-slides.pdf"]
+		"Приложения": [
+			"02",
+			"03",
+			"04",
+			"05",
+			"06"
+		],
+		"02": [
+			"course-introduction-slides.pdf"
+		],
+		"03": [
+			"setting-up-your-virtual-penetration-test-lab-slides.pdf"
+		],
+		"04": [
+			"initial-compromise-slides.pdf"
+		],
+		"05": [
+			"hunting-internal-targets-slides.pdf"
+		],
+		"06": [
+			"owning-the-domain-slides.pdf"
+		]
 	},
 	{
 		"Название курса": "[SkillBox] Python-фреймворк Django",
@@ -1342,7 +1667,11 @@
 			"16.6 Перезапуск плагина.mp4",
 			"16.7 Валидация формы.mp4"
 		],
-		"17.Работа с хостингом": ["17.1 Интро.mp4", "17.2 Работа с хостингом.mp4", "17.3 Аутро.mp4"],
+		"17.Работа с хостингом": [
+			"17.1 Интро.mp4",
+			"17.2 Работа с хостингом.mp4",
+			"17.3 Аутро.mp4"
+		],
 		"Веб-верстка «Продвинутый уровень»": [
 			"1.Верстка HTML-писем",
 			"2.SVG",
@@ -1430,7 +1759,9 @@
 			"8.6 Именованные области сетки.mp4",
 			"8.8 Аутро.mp4"
 		],
-		"9.Будущее верстки": ["9.1 Пути развития верстальщика.mp4"],
+		"9.Будущее верстки": [
+			"9.1 Пути развития верстальщика.mp4"
+		],
 		"Система контроля версий Git": [
 			"1.1 Версии программного кода.mp4",
 			"1.10 Правила работы с Git.mp4",
@@ -1444,7 +1775,9 @@
 			"1.8 Слияние и разрешение конфликтов.mp4",
 			"1.9 Полезные инструменты.mp4"
 		],
-		"1.11 Бонусный урок - публикация проекта на github": ["Как сгенерировать ключ для SSH в Windows 10.pdf"]
+		"1.11 Бонусный урок - публикация проекта на github": [
+			"Как сгенерировать ключ для SSH в Windows 10.pdf"
+		]
 	},
 	{
 		"Название курса": "[SkillBox]-SQL",
@@ -1554,9 +1887,24 @@
 			"025 Деплой приложении",
 			"026 Подведение итогов"
 		],
-		"000 Знакомство": ["000 Знакомство.mp4", "lecture0.pdf"],
-		"001 Введение": ["001 Введение.mp4", "course1", "HomeWork.txt", "lecture1.pdf"],
-		"course1": ["everything_is_an_object.py", "loops.py", "operations.py", "sizes.py", "types", "vars.py"],
+		"000 Знакомство": [
+			"000 Знакомство.mp4",
+			"lecture0.pdf"
+		],
+		"001 Введение": [
+			"001 Введение.mp4",
+			"course1",
+			"HomeWork.txt",
+			"lecture1.pdf"
+		],
+		"course1": [
+			"everything_is_an_object.py",
+			"loops.py",
+			"operations.py",
+			"sizes.py",
+			"types",
+			"vars.py"
+		],
 		"002 Операции, Работа с командной строкой, Сложные типы данных, Функции": [
 			"002 Операции, Работа с командной строкой, Сложные типы данных, Функции.mp4",
 			"course2",
@@ -1564,8 +1912,16 @@
 			"lecture2.pdf",
 			"примеры решения дз #1"
 		],
-		"course2": ["complex_types", "functions.py", "mutations.py"],
-		"примеры решения дз #1": ["extra task #1.py", "quiz #1.py", "quiz #2.py"],
+		"course2": [
+			"complex_types",
+			"functions.py",
+			"mutations.py"
+		],
+		"примеры решения дз #1": [
+			"extra task #1.py",
+			"quiz #1.py",
+			"quiz #2.py"
+		],
 		"003 Обработка ошибок, Функции, Самостоятельная работа": [
 			"003 Обработка ошибок, Функции, Самостоятельная работа.mp4",
 			"course3",
@@ -1574,9 +1930,20 @@
 			"lecture3.pdf",
 			"примеры решения дз #2"
 		],
-		"course3": ["examples.py", "functions", "tryexcept.py", "why.py"],
-		"game_code": ["game.py", "tests.py"],
-		"примеры решения дз #2": ["Simple tasks #1.py", "Simple tasks #2.py"],
+		"course3": [
+			"examples.py",
+			"functions",
+			"tryexcept.py",
+			"why.py"
+		],
+		"game_code": [
+			"game.py",
+			"tests.py"
+		],
+		"примеры решения дз #2": [
+			"Simple tasks #1.py",
+			"Simple tasks #2.py"
+		],
 		"004 Продвинутые концепции функций, Git, Практика": [
 			"004 Продвинутые концепции функций, Git, Практика.mp4",
 			"005 факультатив.mp4",
@@ -1585,7 +1952,13 @@
 			"lecture4_new.pdf",
 			"примеры решения дз #3"
 		],
-		"course4": ["enclosing.py", "functions_are_objects.py", "ipython_log.py", "scope.py", "tricks"],
+		"course4": [
+			"enclosing.py",
+			"functions_are_objects.py",
+			"ipython_log.py",
+			"scope.py",
+			"tricks"
+		],
 		"примеры решения дз #3": [
 			"game_py_solved.py",
 			"Simple tasks #1.py",
@@ -1600,7 +1973,11 @@
 			"lecture5_new.pdf",
 			"примеры решения дз #4"
 		],
-		"ClassWork": ["ClassWork.txt", "clw_day5_task1.py", "clw_day5_task2.py"],
+		"ClassWork": [
+			"ClassWork.txt",
+			"clw_day5_task1.py",
+			"clw_day5_task2.py"
+		],
 		"course5": [
 			"cars.py",
 			"classes.py",
@@ -1614,7 +1991,11 @@
 			"super.py",
 			"why"
 		],
-		"примеры решения дз #4": ["hangman.py", "number_guesser.py", "xox.py"],
+		"примеры решения дз #4": [
+			"hangman.py",
+			"number_guesser.py",
+			"xox.py"
+		],
 		"006 Классы и обьекты": [
 			"007 Классы и обьекты.mp4",
 			"course6",
@@ -1634,7 +2015,10 @@
 			"todo",
 			"what_is_super.py"
 		],
-		"примеры решения дз #5": ["hw_day5_main(all 3).py", "Task5.py"],
+		"примеры решения дз #5": [
+			"hw_day5_main(all 3).py",
+			"Task5.py"
+		],
 		"007 Практика, Синтаксический сахар, Принципы проектирования": [
 			"008 Практика, Синтаксический сахар, Принципы проектирования.mp4",
 			"course7",
@@ -1653,7 +2037,11 @@
 			"lambdas.py",
 			"principles"
 		],
-		"примеры решения дз #6": ["homework6 #3.txt", "task #1.zip", "task #2.zip"],
+		"примеры решения дз #6": [
+			"homework6 #3.txt",
+			"task #1.zip",
+			"task #2.zip"
+		],
 		"008 Генераторы": [
 			"009 Генераторы.mp4",
 			"010 факультатив.mp4",
@@ -1661,8 +2049,17 @@
 			"lecture8_new2.pdf",
 			"примеры решения дз #7"
 		],
-		"course8": ["2to3_examples", "are_all_items_needed.py", "generators"],
-		"примеры решения дз #7": ["easy #1.py", "easy #2.py", "seabattle #1.zip", "seabattle #2.zip"],
+		"course8": [
+			"2to3_examples",
+			"are_all_items_needed.py",
+			"generators"
+		],
+		"примеры решения дз #7": [
+			"easy #1.py",
+			"easy #2.py",
+			"seabattle #1.zip",
+			"seabattle #2.zip"
+		],
 		"009 Json, Интернет, Регулярные выражения, Практика": [
 			"011 Json, Интернет, Регулярные выражения, Практика.mp4",
 			"course9",
@@ -1670,10 +2067,29 @@
 			"lecture9.pdf",
 			"ParseData.txt"
 		],
-		"course9": ["flask_examples", "requirements.txt", "werkzeug_examples", "__init__.py"],
-		"010 Flask": ["012 Flask часть 1.mp4", "course10", "HomeWork.txt", "lecture10_4.pdf", "примеры решения дз #9"],
-		"course10": ["flask_examples", "requirements.txt", "werkzeug_examples", "__init__.py"],
-		"примеры решения дз #9": ["task #1.zip", "task #2.zip"],
+		"course9": [
+			"flask_examples",
+			"requirements.txt",
+			"werkzeug_examples",
+			"__init__.py"
+		],
+		"010 Flask": [
+			"012 Flask часть 1.mp4",
+			"course10",
+			"HomeWork.txt",
+			"lecture10_4.pdf",
+			"примеры решения дз #9"
+		],
+		"course10": [
+			"flask_examples",
+			"requirements.txt",
+			"werkzeug_examples",
+			"__init__.py"
+		],
+		"примеры решения дз #9": [
+			"task #1.zip",
+			"task #2.zip"
+		],
 		"011 Менеджеры контекста, Паттерны проектирования, Конфигурация Flask, Устройство request": [
 			"013 flask часть 2.mp4",
 			"2011-Паттерны проектирования .pdf",
@@ -1682,13 +2098,41 @@
 			"lecture11.pdf",
 			"примеры решения дз #10"
 		],
-		"course11": ["contexts", "request_example", "requirements.txt", "simp_sett", "to_open.txt"],
-		"примеры решения дз #10": ["task #1.zip"],
-		"012 SQL": ["014 sql часть 1.mp4", "015 sql часть 2.mp4", "lecture12.pdf", "примеры решения дз #11"],
-		"примеры решения дз #11": ["task #1.zip"],
-		"013 Flask, ORM": ["016 Flask часть 3.mp4", "course13", "lecture13.pdf"],
-		"course13": ["psycopg2_ex.py", "requirements.txt", "simple_alchemy", "sqlalchemy_example"],
-		"014 Flask, Шаблоны Jinja2": ["017 Flask часть 4.mp4", "course14", "lecture14_4.pdf"],
+		"course11": [
+			"contexts",
+			"request_example",
+			"requirements.txt",
+			"simp_sett",
+			"to_open.txt"
+		],
+		"примеры решения дз #10": [
+			"task #1.zip"
+		],
+		"012 SQL": [
+			"014 sql часть 1.mp4",
+			"015 sql часть 2.mp4",
+			"lecture12.pdf",
+			"примеры решения дз #11"
+		],
+		"примеры решения дз #11": [
+			"task #1.zip"
+		],
+		"013 Flask, ORM": [
+			"016 Flask часть 3.mp4",
+			"course13",
+			"lecture13.pdf"
+		],
+		"course13": [
+			"psycopg2_ex.py",
+			"requirements.txt",
+			"simple_alchemy",
+			"sqlalchemy_example"
+		],
+		"014 Flask, Шаблоны Jinja2": [
+			"017 Flask часть 4.mp4",
+			"course14",
+			"lecture14_4.pdf"
+		],
 		"course14": [
 			"flask_jinja_ext",
 			"jinja2_examples",
@@ -1696,8 +2140,18 @@
 			"simple_foreign_keys",
 			"sqlalchemy_example"
 		],
-		"015 HTML & CSS": ["018 htms css.mp4", "course15", "HomeWork.txt", "lecture15_4.pdf"],
-		"course15": ["bootstrap", "html_1", "html_2", "simple_html"],
+		"015 HTML & CSS": [
+			"018 htms css.mp4",
+			"course15",
+			"HomeWork.txt",
+			"lecture15_4.pdf"
+		],
+		"course15": [
+			"bootstrap",
+			"html_1",
+			"html_2",
+			"simple_html"
+		],
 		"016 JavaScript часть 1": [
 			"019 JS часть 1.mp4",
 			"course16",
@@ -1717,7 +2171,9 @@
 			"scopes",
 			"test.js"
 		],
-		"примеры решения дз #14-15": ["task #1.zip"],
+		"примеры решения дз #14-15": [
+			"task #1.zip"
+		],
 		"017 JavaScript часть 2": [
 			"020 JS часть 2.mp4",
 			"course17",
@@ -1736,17 +2192,66 @@
 			"propagation_and_bubble",
 			"scopes"
 		],
-		"примеры решения дз #16": ["homework_16.js", "hw16.js"],
-		"018 Django часть 1": ["021 django часть 1.mp4", "course18", "lecture18.pdf", "примеры решения дз #17"],
-		"course18": ["helloworld", "my_project", "requirements.txt"],
-		"примеры решения дз #17": ["task #1.zip"],
-		"019 Django часть 2": ["022 django часть 2.mp4", "course19", "lecture19.pdf"],
-		"course19": ["django_orm_example", "manage.py", "pizza_app", "pizza_project", "requirements.txt"],
-		"020 Django часть 3": ["023 django часть 3.mp4", "course20"],
-		"course20": ["db.sqlite3", "git_branches.sh", "manage.py", "pizza_app", "pizza_project", "requirements.txt"],
-		"021 Django часть 4": ["024 django часть 4.mp4", "course21", "lecture21.pdf"],
-		"course21": ["manage.py", "pizza_app", "pizza_auth_app", "pizza_project", "requirements.txt"],
-		"022 Django часть 5": ["025 django часть 5.mp4", "course22", "HomeWork.txt", "lecture22.pdf"],
+		"примеры решения дз #16": [
+			"homework_16.js",
+			"hw16.js"
+		],
+		"018 Django часть 1": [
+			"021 django часть 1.mp4",
+			"course18",
+			"lecture18.pdf",
+			"примеры решения дз #17"
+		],
+		"course18": [
+			"helloworld",
+			"my_project",
+			"requirements.txt"
+		],
+		"примеры решения дз #17": [
+			"task #1.zip"
+		],
+		"019 Django часть 2": [
+			"022 django часть 2.mp4",
+			"course19",
+			"lecture19.pdf"
+		],
+		"course19": [
+			"django_orm_example",
+			"manage.py",
+			"pizza_app",
+			"pizza_project",
+			"requirements.txt"
+		],
+		"020 Django часть 3": [
+			"023 django часть 3.mp4",
+			"course20"
+		],
+		"course20": [
+			"db.sqlite3",
+			"git_branches.sh",
+			"manage.py",
+			"pizza_app",
+			"pizza_project",
+			"requirements.txt"
+		],
+		"021 Django часть 4": [
+			"024 django часть 4.mp4",
+			"course21",
+			"lecture21.pdf"
+		],
+		"course21": [
+			"manage.py",
+			"pizza_app",
+			"pizza_auth_app",
+			"pizza_project",
+			"requirements.txt"
+		],
+		"022 Django часть 5": [
+			"025 django часть 5.mp4",
+			"course22",
+			"HomeWork.txt",
+			"lecture22.pdf"
+		],
 		"course22": [
 			"db.sqlite3",
 			"manage.py",
@@ -1756,7 +2261,12 @@
 			"requirements.txt",
 			"rest_api_app"
 		],
-		"023 Celery": ["026 Celery.mp4", "course23", "lecture23.pdf", "примеры решения дз #22"],
+		"023 Celery": [
+			"026 Celery.mp4",
+			"course23",
+			"lecture23.pdf",
+			"примеры решения дз #22"
+		],
 		"course23": [
 			"db.sqlite3",
 			"manage.py",
@@ -1769,8 +2279,14 @@
 			"run_pytest.sh",
 			"tests"
 		],
-		"примеры решения дз #22": ["task #1.zip"],
-		"024 PyTest": ["027 PyTest.mp4", "course24", "lecture24.pdf"],
+		"примеры решения дз #22": [
+			"task #1.zip"
+		],
+		"024 PyTest": [
+			"027 PyTest.mp4",
+			"course24",
+			"lecture24.pdf"
+		],
 		"course24": [
 			"db.sqlite3",
 			"manage.py",
@@ -1783,8 +2299,14 @@
 			"run_pytest.sh",
 			"tests"
 		],
-		"025 Деплой приложении": ["028 Деплой приложении.mp4", "lecture25.pdf"],
-		"026 Подведение итогов": ["029 Подведение итогов.mp4", "lecture26.pdf"]
+		"025 Деплой приложении": [
+			"028 Деплой приложении.mp4",
+			"lecture25.pdf"
+		],
+		"026 Подведение итогов": [
+			"029 Подведение итогов.mp4",
+			"lecture26.pdf"
+		]
 	},
 	{
 		"Название курса": "[Udemy] Полный Python Developer в 2019 году c нуля до мастера",
@@ -2242,7 +2764,11 @@
 			"173 DEVELOPER FUNDAMENTALS VI-en.srt",
 			"173 DEVELOPER FUNDAMENTALS VI.mp4"
 		],
-		"12 Debugging In Python": ["174 How To Debug Code-en.srt", "174 How To Debug Code.mp4", "174 pdb.txt"],
+		"12 Debugging In Python": [
+			"174 How To Debug Code-en.srt",
+			"174 How To Debug Code.mp4",
+			"174 pdb.txt"
+		],
 		"13 File IO": [
 			"175 Working With Files In Python-en.srt",
 			"175 Working With Files In Python.mp4",
@@ -2595,7 +3121,9 @@
 			"304 AMA - 100000 Students-en.srt",
 			"304 AMA - 100000 Students.mp4"
 		],
-		"24 Extras": ["305 Bonus Special Thank You Gift.html"]
+		"24 Extras": [
+			"305 Bonus Special Thank You Gift.html"
+		]
 	},
 	{
 		"Название курса": "[Udemy] Полный Курс Python 3 от Новичка до Мастера (Питон, Пайтон) [Jose Portilla]",
@@ -2728,7 +3256,9 @@
 			"081 Обзор Домашнего Задания по Генераторам.mp4",
 			"082 Решения для Домашнего Задания по Генераторам.mp4"
 		],
-		"14 Финальный Проект": ["083 Финальный Проект.mp4"],
+		"14 Финальный Проект": [
+			"083 Финальный Проект.mp4"
+		],
 		"15 Продвинутые Модули Python": [
 			"084 Модуль Collections - counter.mp4",
 			"085 Модуль Collections - defaultdict.mp4",
@@ -3039,7 +3569,10 @@
 			"025 Что дальше.mp4",
 			"external-links.txt"
 		],
-		"09 - Эпилог": ["001 Эпилог.mp4", "external-links.txt"],
+		"09 - Эпилог": [
+			"001 Эпилог.mp4",
+			"external-links.txt"
+		],
 		"10 - (Бонус из Практического курса) Реальный проект на JS в классическом стиле": [
 			"001 Вступление к практическому курсу.mp4",
 			"002 original.zip",
@@ -3057,13 +3590,27 @@
 	},
 	{
 		"Название курса": "Атака и защита веб и мобильных приложений",
-		"Папки": ["Урок 1", "Урок 2", "Урок 3", "Урок 4", "Урок 5", "Урок 6", "Урок 7", "Урок 8"],
+		"Папки": [
+			"Урок 1",
+			"Урок 2",
+			"Урок 3",
+			"Урок 4",
+			"Урок 5",
+			"Урок 6",
+			"Урок 7",
+			"Урок 8"
+		],
 		"Урок 1": [
 			"1.mp4",
 			"6cede32250df5d1829f22380d0d254cefb56702c.pdf",
 			"Урок_номер_1._Информационная_безопасность..pdf"
 		],
-		"Урок 2": ["2.mp4", "A1 -+Injection.txt", "A2 -+Broken+Authentication.txt", "Атака_и_защита_сайтов_Урок_2.pdf"],
+		"Урок 2": [
+			"2.mp4",
+			"A1 -+Injection.txt",
+			"A2 -+Broken+Authentication.txt",
+			"Атака_и_защита_сайтов_Урок_2.pdf"
+		],
 		"Урок 3": [
 			"3.mp4",
 			"A2 -+Broken+Authentication.txt",
@@ -3071,9 +3618,18 @@
 			"ScreenCaptureProject2.mp4",
 			"урок_3_Информационная_безопасность.pdf"
 		],
-		"Урок 4": ["4.mp4", "урок_4.pdf"],
-		"Урок 5": ["5.mp4", "Урок_5.pdf"],
-		"Урок 6": ["6.mp4", "урок_6.pdf"],
+		"Урок 4": [
+			"4.mp4",
+			"урок_4.pdf"
+		],
+		"Урок 5": [
+			"5.mp4",
+			"Урок_5.pdf"
+		],
+		"Урок 6": [
+			"6.mp4",
+			"урок_6.pdf"
+		],
 		"Урок 7": [
 			"7.mp4",
 			"dex2jar-2.0",
@@ -3105,11 +3661,23 @@
 			"d2j_invoke.sh",
 			"lib"
 		],
-		"Урок 8": ["8.mp4", "Дополнение к+методичке.docx", "Урок_8.pdf"]
+		"Урок 8": [
+			"8.mp4",
+			"Дополнение к+методичке.docx",
+			"Урок_8.pdf"
+		]
 	},
 	{
 		"Название курса": "Взламываем сайты. Тестирование на проникновение с нуля",
-		"Папки": ["Часть 1", "Часть 2", "Часть 3", "Часть 4", "Часть 5", "Часть 6", "Часть 7"],
+		"Папки": [
+			"Часть 1",
+			"Часть 2",
+			"Часть 3",
+			"Часть 4",
+			"Часть 5",
+			"Часть 6",
+			"Часть 7"
+		],
 		"Часть 1": [
 			"01 - Введение в Курс.mp4",
 			"02 - Обзор лабы и Необходимый Софт.mp4",
@@ -3260,7 +3828,9 @@
 			"010 - Делаем Снапшоты.mp4",
 			"011 - Обновляем установленные программы.mp4"
 		],
-		"03 Сбор Информации": ["012 - Введение в сбор информации.mp4"],
+		"03 Сбор Информации": [
+			"012 - Введение в сбор информации.mp4"
+		],
 		"04 Сбор Информации - Собираем Информацию о Сайте Компании": [
 			"013 - Обзор Maltego.mp4",
 			"014 - Узнаем информацию о Домене, узнаем адрес почты.mp4",
@@ -3274,7 +3844,9 @@
 			"020 - Ищем E-mail друзей жертвы.mp4",
 			"021 - Анализируем полученную информацию, создаем стратегию атаки.mp4"
 		],
-		"06 Злые Файлы Windows": ["022 - Введение.mp4"],
+		"06 Злые Файлы Windows": [
+			"022 - Введение.mp4"
+		],
 		"07 Злые Файлы Windows - Генерируем Бэкдор, который не видят Антивирусы": [
 			"023 - Устанавливаем Veil 3.0.mp4",
 			"024 - Обзор Veil, Основы Пэйлоадов.mp4",
@@ -3302,7 +3874,9 @@
 			"042 - Создаем идеальный инструмент для слежки.mp4",
 			"Ресурсы"
 		],
-		"Ресурсы": ["download-and-execute.txt"],
+		"Ресурсы": [
+			"download-and-execute.txt"
+		],
 		"10 Злые Файлы - Конвертируем злые файлы в трояны": [
 			"043 - Встраиваем злые файлы в любые файлы, например в изображения, PDF, MP4.mp4",
 			"044 - Незаметный запуск злых файлов в фоне.mp4",
@@ -3388,13 +3962,27 @@
 	},
 	{
 		"Название курса": "Информационная безопасность",
-		"Папки": ["Урок 1", "Урок 2", "Урок 3", "Урок 4", "Урок 5", "Урок 6", "Урок 7", "Урок 8"],
+		"Папки": [
+			"Урок 1",
+			"Урок 2",
+			"Урок 3",
+			"Урок 4",
+			"Урок 5",
+			"Урок 6",
+			"Урок 7",
+			"Урок 8"
+		],
 		"Урок 1": [
 			"1.mp4",
 			"6cede32250df5d1829f22380d0d254cefb56702c.pdf",
 			"Урок_номер_1._Информационная_безопасность..pdf"
 		],
-		"Урок 2": ["2.mp4", "A1 -+Injection.txt", "A2 -+Broken+Authentication.txt", "Атака_и_защита_сайтов_Урок_2.pdf"],
+		"Урок 2": [
+			"2.mp4",
+			"A1 -+Injection.txt",
+			"A2 -+Broken+Authentication.txt",
+			"Атака_и_защита_сайтов_Урок_2.pdf"
+		],
 		"Урок 3": [
 			"3.mp4",
 			"A2 -+Broken+Authentication.txt",
@@ -3402,9 +3990,18 @@
 			"ScreenCaptureProject2.mp4",
 			"урок_3_Информационная_безопасность.pdf"
 		],
-		"Урок 4": ["4.mp4", "урок_4.pdf"],
-		"Урок 5": ["5.mp4", "Урок_5.pdf"],
-		"Урок 6": ["6.mp4", "урок_6.pdf"],
+		"Урок 4": [
+			"4.mp4",
+			"урок_4.pdf"
+		],
+		"Урок 5": [
+			"5.mp4",
+			"Урок_5.pdf"
+		],
+		"Урок 6": [
+			"6.mp4",
+			"урок_6.pdf"
+		],
 		"Урок 7": [
 			"7.mp4",
 			"dex2jar-2.0 %281%29.zip",
@@ -3413,29 +4010,104 @@
 			"owasp mobile.docx",
 			"урок_7.pdf"
 		],
-		"Урок 8": ["8.mp4", "Дополнение к+методичке.docx", "Урок_8.pdf"]
+		"Урок 8": [
+			"8.mp4",
+			"Дополнение к+методичке.docx",
+			"Урок_8.pdf"
+		]
 	},
 	{
 		"Название курса": "Курс по CSS Grid",
-		"Папки": ["Бонусы", "CSS Grid"],
-		"Бонусы": ["Профессиональный дизайн", "Профессиональная вёрстка"],
-		"Профессиональный дизайн": ["Профессиональный дизайн Курс.html"],
-		"Профессиональная вёрстка": ["Профессиональная вёрстка Курс.html"],
-		"CSS Grid": ["Css Grid Курс.html"]
+		"Папки": [
+			"Бонусы",
+			"CSS Grid"
+		],
+		"Бонусы": [
+			"Профессиональный дизайн",
+			"Профессиональная вёрстка"
+		],
+		"Профессиональный дизайн": [
+			"Профессиональный дизайн Курс.html"
+		],
+		"Профессиональная вёрстка": [
+			"Профессиональная вёрстка Курс.html"
+		],
+		"CSS Grid": [
+			"Css Grid Курс.html"
+		]
 	},
 	{
 		"Название курса": "Мария Батхан - Разборки с училкой (2020)",
-		"Папки": ["1", "2", "3", "4", "5", "6", "7", "8", "Instagram"],
-		"1": ["1.mp4", "2.mp4", "part1_Mayonnaise Jar & Two Beers.pdf", "Чат"],
-		"Чат": ["01.mpeg", "02.txt", "03.mp4", "04.txt"],
-		"2": ["3.mp4", "4.mp4", "part2_How easy is it to meet someone.pdf", "Чат"],
-		"3": ["5.mp4", "6.mp4", "part3_Does Good Stress Exist.pdf", "Чат"],
-		"4": ["7.mp4", "8.mp4", "Chat", "part4_Meaning hiding behind your date of birth..pdf"],
-		"Chat": ["01.mpeg", "02.txt", "03.txt"],
-		"5": ["10.mp4", "9.mp4", "Chat", "part5_We are what we eat.pdf"],
-		"6": ["11.mp4", "12.mp4", "Chat", "part6_Typical fashion trends.pdf"],
-		"7": ["13.mp4", "14.mp4", "Chat", "part 7_Customs and traditions.pdf"],
-		"8": ["15.mp4", "16.mp4", "Chat", "part8_Studying English.pdf"],
+		"Папки": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"Instagram"
+		],
+		"1": [
+			"1.mp4",
+			"2.mp4",
+			"part1_Mayonnaise Jar & Two Beers.pdf",
+			"Чат"
+		],
+		"Чат": [
+			"01.mpeg",
+			"02.txt",
+			"03.mp4",
+			"04.txt"
+		],
+		"2": [
+			"3.mp4",
+			"4.mp4",
+			"part2_How easy is it to meet someone.pdf",
+			"Чат"
+		],
+		"3": [
+			"5.mp4",
+			"6.mp4",
+			"part3_Does Good Stress Exist.pdf",
+			"Чат"
+		],
+		"4": [
+			"7.mp4",
+			"8.mp4",
+			"Chat",
+			"part4_Meaning hiding behind your date of birth..pdf"
+		],
+		"Chat": [
+			"01.mpeg",
+			"02.txt",
+			"03.txt"
+		],
+		"5": [
+			"10.mp4",
+			"9.mp4",
+			"Chat",
+			"part5_We are what we eat.pdf"
+		],
+		"6": [
+			"11.mp4",
+			"12.mp4",
+			"Chat",
+			"part6_Typical fashion trends.pdf"
+		],
+		"7": [
+			"13.mp4",
+			"14.mp4",
+			"Chat",
+			"part 7_Customs and traditions.pdf"
+		],
+		"8": [
+			"15.mp4",
+			"16.mp4",
+			"Chat",
+			"part8_Studying English.pdf"
+		],
 		"Instagram": [
 			"01.mp4",
 			"02. Разбор ошибок WEEK 1.mp4",
@@ -3446,8 +4118,23 @@
 	},
 	{
 		"Название курса": "Мария Батхан - Училка первая моя (2019)",
-		"Папки": ["Неделя 1", "Неделя 2", "Неделя 3", "Неделя 4", "Неделя 5", "Неделя 6", "Неделя 7", "Неделя 8"],
-		"Неделя 1": ["1", "2", "3", "week1-лексика.pdf", "week1.pdf"],
+		"Папки": [
+			"Неделя 1",
+			"Неделя 2",
+			"Неделя 3",
+			"Неделя 4",
+			"Неделя 5",
+			"Неделя 6",
+			"Неделя 7",
+			"Неделя 8"
+		],
+		"Неделя 1": [
+			"1",
+			"2",
+			"3",
+			"week1-лексика.pdf",
+			"week1.pdf"
+		],
 		"1": [
 			"1.ogg",
 			"10.ogg",
@@ -3463,7 +4150,13 @@
 			"Видеоурок 1.mp4",
 			"Домашка 1.txt"
 		],
-		"2": ["1.ogg", "2.ogg", "3.ogg", "Видеоурок 2.mp4", "Домашка 2.txt"],
+		"2": [
+			"1.ogg",
+			"2.ogg",
+			"3.ogg",
+			"Видеоурок 2.mp4",
+			"Домашка 2.txt"
+		],
 		"3": [
 			"1.ogg",
 			"10.ogg",
@@ -3478,19 +4171,103 @@
 			"Видеоурок 3.mp4",
 			"Домашка 3.txt"
 		],
-		"Неделя 2": ["4", "5", "6", "part2.pdf"],
-		"4": ["1.ogg", "2.ogg", "3.ogg", "4.ogg", "5.ogg", "6.ogg", "7.ogg", "Видеоурок 4.mp4", "Домашка 4.txt"],
-		"5": ["10.ogg", "11.mp4", "8.mp4", "9 (домашка 5).mpeg", "Видеоурок 5.mp4", "Домашка 5.txt"],
-		"6": ["12.mp4", "13.mp4", "14.ogg", "Видеоурок 6.mp4", "Домашка 6.txt"],
-		"Неделя 3": ["7", "8", "9", "part3.pdf"],
-		"7": ["1.mp4", "2.ogg", "3.ogg", "Видеоурок 7.mp4", "Домашка 7.txt"],
-		"8": ["10.ogg", "4.ogg", "5.ogg", "6.ogg", "7.ogg", "8.ogg", "9.ogg", "Видеоурок 8.mp4", "Домашка 8.txt"],
-		"9": ["1.ogg", "2.mp4", "3.ogg", "Видеоурок 9.mp4", "Домашка 9.txt"],
-		"Неделя 4": ["10", "11", "12", "part4.pdf"],
-		"10": ["1.mpeg", "2.ogg", "3.mpeg", "4.ogg", "Видеоурок 10.mp4", "Домашка 10.txt"],
-		"11": ["1.ogg", "2.ogg", "3.mov", "Видеоурок 11.mp4", "Домашка 11.txt"],
-		"12": ["1.mp4", "2.ogg", "3.ogg", "Видеоурок 12.mp4", "Домашка 12.txt"],
-		"Неделя 5": ["13", "14", "15", "part5.pdf"],
+		"Неделя 2": [
+			"4",
+			"5",
+			"6",
+			"part2.pdf"
+		],
+		"4": [
+			"1.ogg",
+			"2.ogg",
+			"3.ogg",
+			"4.ogg",
+			"5.ogg",
+			"6.ogg",
+			"7.ogg",
+			"Видеоурок 4.mp4",
+			"Домашка 4.txt"
+		],
+		"5": [
+			"10.ogg",
+			"11.mp4",
+			"8.mp4",
+			"9 (домашка 5).mpeg",
+			"Видеоурок 5.mp4",
+			"Домашка 5.txt"
+		],
+		"6": [
+			"12.mp4",
+			"13.mp4",
+			"14.ogg",
+			"Видеоурок 6.mp4",
+			"Домашка 6.txt"
+		],
+		"Неделя 3": [
+			"7",
+			"8",
+			"9",
+			"part3.pdf"
+		],
+		"7": [
+			"1.mp4",
+			"2.ogg",
+			"3.ogg",
+			"Видеоурок 7.mp4",
+			"Домашка 7.txt"
+		],
+		"8": [
+			"10.ogg",
+			"4.ogg",
+			"5.ogg",
+			"6.ogg",
+			"7.ogg",
+			"8.ogg",
+			"9.ogg",
+			"Видеоурок 8.mp4",
+			"Домашка 8.txt"
+		],
+		"9": [
+			"1.ogg",
+			"2.mp4",
+			"3.ogg",
+			"Видеоурок 9.mp4",
+			"Домашка 9.txt"
+		],
+		"Неделя 4": [
+			"10",
+			"11",
+			"12",
+			"part4.pdf"
+		],
+		"10": [
+			"1.mpeg",
+			"2.ogg",
+			"3.mpeg",
+			"4.ogg",
+			"Видеоурок 10.mp4",
+			"Домашка 10.txt"
+		],
+		"11": [
+			"1.ogg",
+			"2.ogg",
+			"3.mov",
+			"Видеоурок 11.mp4",
+			"Домашка 11.txt"
+		],
+		"12": [
+			"1.mp4",
+			"2.ogg",
+			"3.ogg",
+			"Видеоурок 12.mp4",
+			"Домашка 12.txt"
+		],
+		"Неделя 5": [
+			"13",
+			"14",
+			"15",
+			"part5.pdf"
+		],
 		"13": [
 			"1.ogg",
 			"2.ogg",
@@ -3503,9 +4280,24 @@
 			"Видеоурок 13.mp4",
 			"Домашка 13.txt"
 		],
-		"14": ["1.ogg", "Видеоурок 14.mp4", "Домашка 14.txt"],
-		"15": ["1.mpeg", "2.ogg", "3.ogg", "Видеоурок 15.mp4", "Домашка 15.txt"],
-		"Неделя 6": ["16", "17", "18", "part6.pdf"],
+		"14": [
+			"1.ogg",
+			"Видеоурок 14.mp4",
+			"Домашка 14.txt"
+		],
+		"15": [
+			"1.mpeg",
+			"2.ogg",
+			"3.ogg",
+			"Видеоурок 15.mp4",
+			"Домашка 15.txt"
+		],
+		"Неделя 6": [
+			"16",
+			"17",
+			"18",
+			"part6.pdf"
+		],
 		"16": [
 			"1.ogg",
 			"2.ogg",
@@ -3519,7 +4311,10 @@
 			"Домашка 16.txt",
 			"Курс  Училка первая моя - Englishmaria.mp4"
 		],
-		"17": ["Домашка 17.txt", "Курс  Училка первая моя - Englishmaria.mp4"],
+		"17": [
+			"Домашка 17.txt",
+			"Курс  Училка первая моя - Englishmaria.mp4"
+		],
 		"18": [
 			"1.mp4",
 			"2.mp4",
@@ -3533,11 +4328,39 @@
 			"Домашка 18.txt",
 			"Курс  Училка первая моя - Englishmaria.mp4"
 		],
-		"Неделя 7": ["19", "20", "21", "part7.pdf"],
-		"19": ["1.ogg", "2.txt", "3.mpeg", "4. Домашка 19.txt", "5.ogg", "6.jpeg", "Видеоурок 19.mp4"],
-		"20": ["1. Домашка 20.txt", "2.ogg", "3.mpeg", "4.ogg", "Видеоурок 20.mp4"],
-		"21": ["1. Домашка 21.txt", "2.ogg", "Видеоурок 21.mp4"],
-		"Неделя 8": ["22", "23", "24", "part8.pdf"],
+		"Неделя 7": [
+			"19",
+			"20",
+			"21",
+			"part7.pdf"
+		],
+		"19": [
+			"1.ogg",
+			"2.txt",
+			"3.mpeg",
+			"4. Домашка 19.txt",
+			"5.ogg",
+			"6.jpeg",
+			"Видеоурок 19.mp4"
+		],
+		"20": [
+			"1. Домашка 20.txt",
+			"2.ogg",
+			"3.mpeg",
+			"4.ogg",
+			"Видеоурок 20.mp4"
+		],
+		"21": [
+			"1. Домашка 21.txt",
+			"2.ogg",
+			"Видеоурок 21.mp4"
+		],
+		"Неделя 8": [
+			"22",
+			"23",
+			"24",
+			"part8.pdf"
+		],
 		"22": [
 			"1.ogg",
 			"2. Присылаем аудио «Кто что понял».mp4",
@@ -3546,12 +4369,30 @@
 			"5. Домашка 22.txt",
 			"Видеоурок 22.mp4"
 		],
-		"23": ["1. Домашка 23.txt", "2.ogg", "3.ogg", "4. Присылаем аудио «Кто что понял».mp4", "Видеоурок 23.mp4"],
-		"24": ["1. Присылаем аудио «Кто что понял».mp4", "Видеоурок 24.mp4"]
+		"23": [
+			"1. Домашка 23.txt",
+			"2.ogg",
+			"3.ogg",
+			"4. Присылаем аудио «Кто что понял».mp4",
+			"Видеоурок 23.mp4"
+		],
+		"24": [
+			"1. Присылаем аудио «Кто что понял».mp4",
+			"Видеоурок 24.mp4"
+		]
 	},
 	{
 		"Название курса": "Модель OSI и стек протоколов TCP-IP",
-		"Папки": ["Урок 1", "Урок 2", "Урок 3", "Урок 4", "Урок 5", "Урок 6", "Урок 7", "Урок 8"],
+		"Папки": [
+			"Урок 1",
+			"Урок 2",
+			"Урок 3",
+			"Урок 4",
+			"Урок 5",
+			"Урок 6",
+			"Урок 7",
+			"Урок 8"
+		],
 		"Урок 1": [
 			"1.mp4",
 			"20. Компьютерные+сети.+Методичка+1.+Ethernet+1+%282%29.pdf",
@@ -3619,7 +4460,9 @@
 	{
 		"Название курса": "Препроцессоры SASS и LESS",
 		"Папки": [],
-		"Файлы": ["Страница видеокурса.html"]
+		"Файлы": [
+			"Страница видеокурса.html"
+		]
 	},
 	{
 		"Название курса": "Сетевые технологии",
@@ -3676,10 +4519,19 @@
 			"6. Linux Hacking",
 			"7. Bye!"
 		],
-		"1. Введение": ["1. Приветствие!.mp4"],
-		"2. Правильная настройка роутера": ["1. Настройка роутера.mp4", "2. Прошивки роутеров.mp4"],
-		"3. Арсенал Этичного WiFi пентестера": ["1. Арсенал для вардрайвера.mp4"],
-		"4. Zero level. Osint": ["1. А вдруг пароль от точки доступа уже есть.mp4"],
+		"1. Введение": [
+			"1. Приветствие!.mp4"
+		],
+		"2. Правильная настройка роутера": [
+			"1. Настройка роутера.mp4",
+			"2. Прошивки роутеров.mp4"
+		],
+		"3. Арсенал Этичного WiFi пентестера": [
+			"1. Арсенал для вардрайвера.mp4"
+		],
+		"4. Zero level. Osint": [
+			"1. А вдруг пароль от точки доступа уже есть.mp4"
+		],
 		"5. Routerscan, взлом из WAN. Пуллы адресов": [
 			"1. Сканирование и взлом. Routerscan.mp4",
 			"2. Взлом Wifi через RS подбором WPSPixie dust.mp4"
@@ -3699,7 +4551,9 @@
 			"8.2 Online Hash crack.html",
 			"9. Evil Twin атака используя Fluxion.mp4"
 		],
-		"7. Bye!": ["1. Спасибо за внимание! Увидимся в следующей части посвященной пост эксплуатации!.mp4"]
+		"7. Bye!": [
+			"1. Спасибо за внимание! Увидимся в следующей части посвященной пост эксплуатации!.mp4"
+		]
 	},
 	{
 		"Название курса": "Этичный хаккинг с Nmap",
@@ -3723,7 +4577,10 @@
 			"03. Что такое Nmap.mp4",
 			"04. Цели и задачи  курса.mp4"
 		],
-		"02. Памятка по Nmap": ["05. Памятка по Nmap.mp4", "Памятка по Nmap 0.6.pdf"],
+		"02. Памятка по Nmap": [
+			"05. Памятка по Nmap.mp4",
+			"Памятка по Nmap 0.6.pdf"
+		],
 		"03. Установка Nmap": [
 			"06. Цели и задачи обучения.mp4",
 			"07. Как установить Nmap.mp4",

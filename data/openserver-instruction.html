@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Videos storage</title>
+</head>
+<link rel="stylesheet" href="../css/styles.css">
+
+<body>
+	<section>
+		<div class="container">
+			<article>
+				<h1>Настройка Openserver с других устройств.</h1>
+				<figure>
+					<p>
+						Открыть файл Hosts (Путь к нему: <dfn>C:/Windows/System32/drivers/etc/hosts</dfn>) и Прописать в него IPv4-адрес устройства + Локальный Домен Вашего Сайта
+						на OpenServer.
+					</p>
+					<details open>
+						<summary>Пример</summary>
+						<pre>
+							192.168.0.101 mysite.ru
+						</pre>
+					</details>
+					<details open>
+						<summary>Как создать домен в Openserver</summary>
+						<ol>
+							<li>
+								Открываем настройки Openserver.
+							</li>
+							<li>
+								Выбираем вкладку <strong>Домены</strong>
+							</li>
+							<li>
+								Прописываем название Домена и указываем папку которую будем отображать на локальном сервере
+							</li>
+						</ol>
+						<p>
+							<strong>Внимание!</strong> нужно переименовать папку localhost в папке domains Вашего Openserver (Путь к нему: YourDisc:\YourPath\openserver\domains)
+							или
+							создать новую дабы избежать возможных ошибок
+						</p>
+					</details>
+					<details open>
+						<summary>Как создать алиас в Openserver</summary>
+						<ol>
+							<li>
+								Открываем настройки Openserver.
+							</li>
+							<li>
+								Выбираем вкладку <strong>Алиасы</strong>
+							</li>
+							<li>
+								Прописываем исходный домен (локальны IPv4-адрес Вашего устройства)
+							</li>
+							<li>
+								Указываем конечный домен (ранее созданный)
+							</li>
+						</ol>
+					</details>
+				</figure>
+			</article>
+
+		</div>
+	</section>
+	<div style="margin-top: 15vh;"></div>
+</body>
+
+</html>
