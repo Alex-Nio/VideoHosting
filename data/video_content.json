@@ -4556,6 +4556,77 @@
 		]
 	},
 	{
+		"Название курса": "Master JavaScript Animations with Greensock",
+		"Папки": [
+			"01 Introduction",
+			"02 The basics of GreenSock",
+			"03 The Timelines",
+			"04 Greensock Projects",
+			"05 Animate on Scroll with ScrollTrigger",
+			"06 Scroll Projects",
+			"GSAP-Sandbox"
+		],
+		"01 Introduction": [
+			"001 Introduction.mp4",
+			"002 Source Code.mp4"
+		],
+		"02 The basics of GreenSock": [
+			"001 The gsap.to() method.mp4",
+			"002 The gsap.from() method.mp4",
+			"003 The last tween method _ gsap.fromTo().mp4",
+			"004 The Easing with GSAP.mp4",
+			"005 Utility props.mp4",
+			"006 The stagger way.mp4",
+			"007 Animate random values.mp4",
+			"008 Using the greensock Keyframes.mp4",
+			"009 Trigger some event callbacks.mp4",
+			"010 How to save a tween _.mp4",
+			"011 Set some values.mp4",
+			"012 The utility methods of the tweens.mp4"
+		],
+		"03 The Timelines": [
+			"001 Setting up a Timeline.mp4",
+			"002 The position parameters.mp4",
+			"003 Properties and methods of the timeline.mp4",
+			"004 The add() and addLabel() handy methods.mp4"
+		],
+		"04 Greensock Projects": [
+			"001 Reveal animations project.mp4",
+			"002 Restaurant Loader project.mp4",
+			"003 Vertical countdown.mp4",
+			"004 Horizontal Slider.mp4",
+			"005 Horizontal Slider II.mp4",
+			"006 Horizontal Slider III.mp4"
+		],
+		"05 Animate on Scroll with ScrollTrigger": [
+			"001 Basic implementation.mp4",
+			"002 Change the Trigger and Scroller position.mp4",
+			"003 Scrub and Pin.mp4"
+		],
+		"06 Scroll Projects": [
+			"001 Multiple Scroll Project.mp4",
+			"002 Historical Timeline Project.mp4"
+		],
+		"GSAP-Sandbox": [
+			"1. The basics of GSAP",
+			"2. Scroll Animations",
+			"3. Projects"
+		],
+		"1. The basics of GSAP": [
+			"index.html",
+			"ressources",
+			"style.css"
+		],
+		"2. Scroll Animations": [
+			"index.html",
+			"style.css"
+		],
+		"3. Projects": [
+			"1.StartingProjects",
+			"2.FinishedProjects"
+		]
+	},
+	{
 		"Название курса": "Этичный хаккинг с Nmap",
 		"Папки": [
 			"01. Введение в курс",
@@ -4883,6 +4954,108 @@
 			"7. Перегрузка методов и конструкторов.html",
 			"8. Полиморфизм.mp4",
 			"9. Полиморфизм.html"
+		]
+	},
+	{
+		"Название курса": "Moscow Digital Academy. Обучение веб-дизайну от профессионалов индустрии",
+		"Папки": [
+			"01 урок - Digital дизайнер, Digital пространство.mp4",
+			"02 урок - Модульная сетка.mp4",
+			"03 урок - Типографика.mp4",
+			"04 урок - Разработка сайта.mp4",
+			"05 урок - UX_UI.mp4",
+			"06 урок - Адаптивный сайт.mp4",
+			"07 урок - UX-UI 2 часть",
+			"08 урок - Техническая часть",
+			"09 урок - Позиционирование",
+			"10 урок - Анимация и интерактив, переговоры",
+			"11 урок - Мобильные приложения",
+			"12 урок - Работодатели и трудоустроиство",
+			"13 урок - Digital- менеджмент",
+			"14 урок - Оформление кейсов",
+			"15 урок - Дизайн мышление, интернет-маркетинг",
+			"16 урок - про SMM",
+			"Дополнительно",
+			"КНИГИ.rtf",
+			"Состав уроков.doc"
+		],
+		"07 урок - UX-UI 2 часть": [
+			"7 урок (Digital-дизаин) UX-UI 2 часть.mp4",
+			"MDA_lesson_9_new.pdf"
+		],
+		"08 урок - Техническая часть": [
+			"8 урок (Digital-дизайн) - Техническая часть.mp4",
+			"MDA_10_new.pdf"
+		],
+		"09 урок - Позиционирование": [
+			"9 урок (Digital-дизайн) - Позиционирование.mp4",
+			"borodino.jpg",
+			"borodino.psd",
+			"Modul_12_new.pdf",
+			"Modul_23_2.pdf",
+			"Дополнение"
+		],
+		"Дополнение": [
+			"Разбор ДЗ-4 сайт Бородинского сражения.mp4"
+		],
+		"10 урок - Анимация и интерактив, переговоры": [
+			"10 урок (Digital-дизайн) - Анимация и интерактив, переговоры.mp4",
+			"Modul_14_new.pdf",
+			"Modul_20.pdf"
+		],
+		"11 урок - Мобильные приложения": [
+			"11 урок - Мобильные приложения.mp4",
+			"Дополнения"
+		],
+		"Дополнения": [
+			"Д3-3 Феликс ТЗ.docx",
+			"Д3-4 Сайт образовательный.docx",
+			"ДЗ.mp4"
+		],
+		"12 урок - Работодатели и трудоустроиство": [
+			"12 урок (Digital-дизаин) - Работодатели и трудоустроиство.mp4",
+			"MDA_lesson_17_2.pdf"
+		],
+		"13 урок - Digital- менеджмент": [
+			"13 урок - Digital- менеджмент.mp4",
+			"Modul26.pdf"
+		],
+		"14 урок - Оформление кейсов": [
+			"14 занятие (Digital-дизайн) - Оформление кейсов (20 марта).mp4",
+			"Modul13.pdf"
+		],
+		"15 урок - Дизайн мышление, интернет-маркетинг": [
+			"15 занятие (Digital-дизайн) - Дизайн мышление, интернет-маркетинг (22 марта).mp4",
+			"dizayn-myshlenie.pdf",
+			"internet-marketing.pdf"
+		],
+		"16 урок - про SMM": [
+			"16 занятие (Digital-дизайн) - про SMM (27 марта).mp4",
+			"MDA_SMM_27_03_2017.pdf"
+		],
+		"Дополнительно": [
+			"К занятиям 1-6",
+			"Создаем сайт-портфолио ч. 1-6"
+		],
+		"К занятиям 1-6": [
+			"MDA_lesson_6_new.pdf",
+			"Modul2_new.pdf",
+			"Modul3_new.pdf",
+			"Modul5_new.pdf",
+			"Modul7.pdf",
+			"Modul8_new.pdf",
+			"Pадание 1.docx",
+			"Дополнение к уроку 6",
+			"Дополнение с пояснением к ДЗ",
+			"Модуль 1 — Digital-пространство.pdf"
+		],
+		"Создаем сайт-портфолио ч. 1-6": [
+			"Создаем сайт-портфолио – 1 часть.mp4",
+			"Создаем сайт-портфолио – 2 часть.mp4",
+			"Создаем сайт-портфолио – 3 часть.mp4",
+			"Создаем сайт-портфолио – 4 часть.mp4",
+			"Создаем сайт-портфолио – 5 часть.mp4",
+			"Создаем сайт-портфолио – 6 часть.mp4"
 		]
 	}
 ]
