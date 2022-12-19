@@ -14,13 +14,15 @@
         "Курс по CSS Grid",
         "Препроцессоры SASS и LESS"
     ],
-    "JavaScript и Фреймворки": [
+    "JavaScript и Анимации": [
         "[Udemy] Полный курс по JavaScript + React - с нуля до результата (2021)",
+        "Master JavaScript Animations with Greensock"
+    ],
+    "Vue Js": [
         "Vue.js - с нуля до про",
         "[Дмитрий Лаврик] Vue.js",
         "[WebForMySelf] Фреймворк Vue.js",
-        "Vue 3 2021 Владилен Минин",
-        "Master JavaScript Animations with Greensock"
+        "Vue 3 2021 Владилен Минин"
     ],
     "Python": [
         "[OTUS] Web-разработчик на Python",
